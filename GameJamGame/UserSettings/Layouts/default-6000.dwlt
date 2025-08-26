@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -497,23 +497,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ec93feff
-      m_LastClickedID: -93204
-      m_ExpandedIDs: 54e8feff5ce9fefff2e9feffeeeafeff26ebfeffc2ecfeff966effffbe73fffff073ffff2675fffffa76ffffe4be00009a150100e415010058160100d6160100de160100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: dc8dffffe2e3ffffceecffff0cf8ffff22b20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -29220
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1103,9 +1103,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.4908303, y: 20.084616, z: -0.2319586}
+    m_Target: {x: 26.151548, y: 3.5737634, z: -0.25101596}
     speed: 2
-    m_Value: {x: 1.1392626, y: 19.375881, z: -0.21860129}
+    m_Value: {x: 26.151548, y: 3.5737634, z: -0.25101596}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1155,9 +1155,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 31.018713
+    m_Target: 25.967524
     speed: 2
-    m_Value: 29.68298
+    m_Value: 25.967524
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1375,7 +1375,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Rendering
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1385,16 +1385,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Rendering
+  - Assets/Prefabs
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\2326296\Documents\GitHub\gamejamproject\GameJamGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 50150100
-    m_LastClickedID: 70992
-    m_ExpandedIDs: 000000003aa6000000ca9a3bffffff7f
+    m_SelectedIDs: 46b00000
+    m_LastClickedID: 45126
+    m_ExpandedIDs: 0000000056ae000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1423,7 +1423,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000056ae0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1469,7 +1469,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
