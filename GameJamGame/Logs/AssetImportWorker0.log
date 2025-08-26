@@ -2,7 +2,7 @@ Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.50f1 (f1ef1dca8bff) revision 15855389'; Using compiler version '193933523'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26100) 64bit Education' Language: 'en' Physical Memory: 32477 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-08-26T09:30:22Z
+Date: 2025-08-26T09:52:00Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
@@ -12,19 +12,19 @@ C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/2309516/Documents/GitHub/gamejamproject/GameJamGame
+C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61924
+53787
 -job-worker-count
 9
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/2309516/Documents/GitHub/gamejamproject/GameJamGame
-C:/Users/2309516/Documents/GitHub/gamejamproject/GameJamGame
+Successfully changed project path to: C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
+C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -60,12 +60,12 @@ C:/Users/2309516/Documents/GitHub/gamejamproject/GameJamGame
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27724]  Target information:
+Player connection [504]  Target information:
 
-Player connection [27724]  * "[IP] 10.4.6.160 [Port] 0 [Flags] 2 [Guid] 1450356576 [EditorId] 1450356576 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21C-03) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [504]  * "[IP] 10.4.4.159 [Port] 0 [Flags] 2 [Guid] 81882380 [EditorId] 81882380 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21C-02) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [27724] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [27724] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [504] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [504] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -77,11 +77,11 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 9.06 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 10.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.50f1 (f1ef1dca8bff)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/2309516/Documents/GitHub/gamejamproject/GameJamGame/Assets
+[Subsystems] Discovering subsystems at path C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -90,13 +90,13 @@ Direct3D:
     VRAM:     10053 MB
     Driver:   32.0.15.7680
 Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
-Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Shader 'TextMeshPro/Distance Field Overlay': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+Shader 'TextMeshPro/Distance Field SSD': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56284
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56556
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -106,8 +106,8 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
-Registered in 0.017912 seconds.
-- Loaded All Assemblies, in  0.569 seconds
+Registered in 0.024198 seconds.
+- Loaded All Assemblies, in  0.611 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for AppleTV target not found
@@ -115,42 +115,42 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 558 ms
+Android Extension - Scanning For ADB Devices 1433 ms
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
 Native extension for VisionOS target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.068 seconds
-Domain Reload Profiling: 1634ms
-	BeginReloadAssembly (209ms)
+- Finished resetting the current domain, in  1.947 seconds
+Domain Reload Profiling: 2553ms
+	BeginReloadAssembly (222ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (228ms)
-		LoadAssemblies (214ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (79ms)
+	LoadAllAssembliesAndSetupDomain (243ms)
+		LoadAssemblies (226ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (217ms)
-			TypeCache.Refresh (216ms)
-				TypeCache.ScanAssembly (198ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (229ms)
+				TypeCache.ScanAssembly (208ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (1069ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1947ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1014ms)
+		SetupLoadedEditorAssemblies (1909ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (748ms)
+			InitializePlatformSupportModulesInManaged (1629ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (66ms)
-			ProcessInitializeOnLoadAttributes (132ms)
-			ProcessInitializeOnLoadMethodAttributes (64ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (140ms)
+			ProcessInitializeOnLoadMethodAttributes (67ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -159,8 +159,8 @@ Domain Reload Profiling: 1634ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.050 seconds
-Refreshing native plugins compatible for Editor in 7.77 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.119 seconds
+Refreshing native plugins compatible for Editor in 6.85 ms, found 4 plugins.
 Native extension for AppleTV target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -170,217 +170,104 @@ Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Playba
 Native extension for VisionOS target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.683 seconds
-Domain Reload Profiling: 1726ms
-	BeginReloadAssembly (270ms)
+- Finished resetting the current domain, in  0.689 seconds
+Domain Reload Profiling: 1801ms
+	BeginReloadAssembly (288ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (664ms)
-		LoadAssemblies (594ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (697ms)
+		LoadAssemblies (631ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (245ms)
-			TypeCache.Refresh (189ms)
-				TypeCache.ScanAssembly (168ms)
-			BuildScriptInfoCaches (45ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (683ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (546ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (50ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (128ms)
-			ProcessInitializeOnLoadAttributes (316ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 7.43 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4479 unused Assets / (1.1 MB). Loaded Objects now: 4998.
-Memory consumption went from 98.6 MB to 97.5 MB.
-Total: 8.175100 ms (FindLiveObjects: 0.666800 ms CreateObjectMapping: 0.726100 ms MarkObjects: 5.306500 ms  DeleteObjects: 1.474700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1274.909457 seconds.
-  path: Assets/Scenes/Tester LEVEL.unity
-  artifactKey: Guid(5b7595238a0650745a753796a0d5940e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Tester LEVEL.unity using Guid(5b7595238a0650745a753796a0d5940e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '113f34ca9fd9cbf8dd9e8d72f4332b0d') in 0.0060476 seconds
-Number of updated asset objects reloaded before import = 13Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.953 seconds
-Refreshing native plugins compatible for Editor in 6.12 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.637 seconds
-Domain Reload Profiling: 1587ms
-	BeginReloadAssembly (293ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (559ms)
-		LoadAssemblies (554ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (172ms)
-			TypeCache.Refresh (10ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (150ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (637ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (490ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (47ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (121ms)
-			ProcessInitializeOnLoadAttributes (273ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 6.44 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4478 unused Assets / (1.1 MB). Loaded Objects now: 5003.
-Memory consumption went from 93.2 MB to 92.1 MB.
-Total: 8.196100 ms (FindLiveObjects: 0.664000 ms CreateObjectMapping: 0.814900 ms MarkObjects: 5.232700 ms  DeleteObjects: 1.483800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.243 seconds
-Refreshing native plugins compatible for Editor in 7.00 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.718 seconds
-Domain Reload Profiling: 1958ms
-	BeginReloadAssembly (464ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (99ms)
-	RebuildCommonClasses (49ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (669ms)
-		LoadAssemblies (722ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (225ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (204ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (719ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (546ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (52ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (296ms)
-			ProcessInitializeOnLoadMethodAttributes (43ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 9.70 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4478 unused Assets / (1.1 MB). Loaded Objects now: 5005.
-Memory consumption went from 93.2 MB to 92.1 MB.
-Total: 8.791200 ms (FindLiveObjects: 0.678600 ms CreateObjectMapping: 0.903800 ms MarkObjects: 5.615700 ms  DeleteObjects: 1.592000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.945 seconds
-Refreshing native plugins compatible for Editor in 6.92 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.710 seconds
-Domain Reload Profiling: 1652ms
-	BeginReloadAssembly (288ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (16ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (43ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (557ms)
-		LoadAssemblies (545ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (175ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (155ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (711ms)
+		AnalyzeDomain (251ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (171ms)
+			BuildScriptInfoCaches (49ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (689ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (548ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (52ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (139ms)
-			ProcessInitializeOnLoadAttributes (300ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
+			InitializePlatformSupportModulesInManaged (50ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 7.52 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 6.80 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 4478 unused Assets / (1.1 MB). Loaded Objects now: 5007.
-Memory consumption went from 93.2 MB to 92.1 MB.
-Total: 8.617800 ms (FindLiveObjects: 0.713000 ms CreateObjectMapping: 0.737300 ms MarkObjects: 5.527600 ms  DeleteObjects: 1.638400 ms)
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4479 unused Assets / (1.1 MB). Loaded Objects now: 4999.
+Memory consumption went from 101.3 MB to 100.1 MB.
+Total: 8.506000 ms (FindLiveObjects: 0.653000 ms CreateObjectMapping: 0.853700 ms MarkObjects: 5.471400 ms  DeleteObjects: 1.526800 ms)
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 603564.922568 seconds.
+  path: Assets/Scenes/Tester LEVEL.unity
+  artifactKey: Guid(5b7595238a0650745a753796a0d5940e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tester LEVEL.unity using Guid(5b7595238a0650745a753796a0d5940e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '113f34ca9fd9cbf8dd9e8d72f4332b0d') in 0.0075065 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(7cdff66907026e04db5ed43d7af1f7e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(7cdff66907026e04db5ed43d7af1f7e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4593e162422ba7184398908759dd7eb') in 0.0005264 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 91.112976 seconds.
+  path: Assets/Scenes/Level 1.unity
+  artifactKey: Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 1.unity using Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2cb632cfbcb4d99fecbc201f7b3daefd') in 0.0008958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1749.442144 seconds.
+  path: Assets/SpritesAndArt/chargesprite.png
+  artifactKey: Guid(59b34e9b55cc6194c800d936879b2438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/chargesprite.png using Guid(59b34e9b55cc6194c800d936879b2438) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a7af1cf9e1171f371b795eb5676f2fd') in 0.1519745 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SpritesAndArt/dungeontileset.png
+  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5327bfedb453567765accee718e9d572') in 0.1211611 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 63
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SpritesAndArt/plugenemy.png
+  artifactKey: Guid(a15281c990864c14abd35aebbecbc7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/plugenemy.png using Guid(a15281c990864c14abd35aebbecbc7a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd75a80ee3d407d9d6f204a56a31f2df7') in 0.0136326 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SpritesAndArt/netrunnersprite.png
+  artifactKey: Guid(de64b016040c6a2458708b3ce2ccd2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/netrunnersprite.png using Guid(de64b016040c6a2458708b3ce2ccd2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '564f4ca533b3874079ce7c0cf9f9dc32') in 0.0303017 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
