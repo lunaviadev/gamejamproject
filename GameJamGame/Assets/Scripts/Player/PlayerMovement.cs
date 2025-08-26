@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 8f;
     public float acceleration = 50f;
     public float deceleration = 100f;
+    public Animator animator;
 
     private Rigidbody2D rb;
     private Vector2 input;
@@ -23,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         input = new Vector2(x, y).normalized;
+        
+        animator.SetFloat("Speed", rb.velocity.magnitude);
     }
 
     private void FixedUpdate()

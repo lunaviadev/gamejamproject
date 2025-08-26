@@ -131,6 +131,7 @@ MonoBehaviour:
   moveSpeed: 8
   acceleration: 60
   deceleration: 100
+  animator: {fileID: 4155204231300885242}
 --- !u!114 &5475092367847717307
 MonoBehaviour:
   m_ObjectHideFlags: 0
