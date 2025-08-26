@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
-        rb.drag = 0f; // we’ll handle decel manually
+        rb.linearDamping = 0f; // we’ll handle decel manually
     }
 
     private void Update()
@@ -25,13 +25,13 @@ public class PlayerMovement : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
         input = new Vector2(x, y).normalized;
         
-        animator.SetFloat("Speed", rb.velocity.magnitude);
+        animator.SetFloat("Speed", rb.linearVelocity.magnitude);
     }
 
     private void FixedUpdate()
     {
         Vector2 targetVelocity = input * moveSpeed;
-        Vector2 velocity = rb.velocity;
+        Vector2 velocity = rb.linearVelocity;
 
         Vector2 velocityDiff = targetVelocity - velocity;
 
@@ -42,6 +42,6 @@ public class PlayerMovement : MonoBehaviour
         if (velocityDiff.magnitude < accelRate * Time.fixedDeltaTime)
             movement = targetVelocity;
 
-        rb.velocity = movement;
+        rb.linearVelocity = movement;
     }
 }

@@ -18,7 +18,7 @@ public class CameraFollow : MonoBehaviour
         Rigidbody2D playerRb = target.GetComponent<Rigidbody2D>();
         if (playerRb)
         {
-            targetPos += new Vector3(playerRb.velocity.x * lookAheadOffset.x, playerRb.velocity.y * lookAheadOffset.y, 0);
+            targetPos += new Vector3(playerRb.linearVelocity.x * lookAheadOffset.x, playerRb.linearVelocity.y * lookAheadOffset.y, 0);
         }
 
         targetPos.z = transform.position.z;

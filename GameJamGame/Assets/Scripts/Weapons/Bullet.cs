@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     public void Fire(Vector2 direction, float speed, string tag = "Player")
     {
-        rb.velocity = direction.normalized * speed;
+        rb.linearVelocity = direction.normalized * speed;
         shooterTag = tag;
     }
 
