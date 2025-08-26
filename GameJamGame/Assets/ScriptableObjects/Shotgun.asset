@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851589d55d462f94699e67e4a5a31440, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
+  weaponSprite: {fileID: 21300000, guid: a15281c990864c14abd35aebbecbc7a6, type: 3}
   weaponName: Shotgun
   fireRate: 0.4
   bulletSpeed: 10
   bulletsPerShot: 5
   spreadAngle: 10
   recoilForce: 5
+  damage: 1
+  handOffset: {x: 1, y: 0}
   magazineSize: 4
   reloadTime: 2.5
+  maxAmmoReserve: 30
   abilityType: 1
   bulletPrefab: {fileID: 3993684630660934768, guid: f2cd228e12118534199a15887a68c30a, type: 3}

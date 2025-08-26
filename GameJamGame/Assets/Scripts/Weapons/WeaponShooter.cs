@@ -4,6 +4,7 @@ using UnityEngine;
 public class WeaponShooter : MonoBehaviour
 {
     public Weapon currentWeapon;
+    public WeaponHolder weaponHolder;
     private float lastFireTime;
     private int currentAmmo;
     private int currentReserveAmmo;
@@ -21,6 +22,12 @@ public class WeaponShooter : MonoBehaviour
         currentAmmo = newWeapon.magazineSize;
         currentReserveAmmo = newWeapon.maxAmmoReserve;
         isReloading = false;
+
+        if (weaponHolder != null && newWeapon.weaponSprite != null)
+        {
+            weaponHolder.EquipWeaponSprite(newWeapon.weaponSprite, newWeapon.handOffset);
+        }
+
     }
 
     private void Start()
@@ -48,6 +55,8 @@ public class WeaponShooter : MonoBehaviour
             return;
         }
         if (isReloading) return;
+
+        
 
         if (Input.GetButton("Fire1") && Time.time >= lastFireTime + currentWeapon.fireRate)
         {
@@ -92,6 +101,7 @@ public class WeaponShooter : MonoBehaviour
             rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
         }
     }
+    
 
     private void UseAbilityandDropWeapon()
     {

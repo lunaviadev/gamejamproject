@@ -4,6 +4,7 @@ using UnityEngine;
 public class Weapon : ScriptableObject
 {
     [Header("Weapon Stats")]
+    public Sprite weaponSprite;
     public string weaponName = "New Weapon";
     public float fireRate = 0.2f; // Time between shots
     public float bulletSpeed = 15f;
@@ -11,6 +12,7 @@ public class Weapon : ScriptableObject
     public float spreadAngle = 0f; // degrees between bullets
     public float recoilForce = 5f; // force applied to player on shoot. FORCE PER BULLET
     public int damage = 1; // damage per bullet
+    public Vector2 handOffset;
 
 
     [Header("Magazine Settings")]
