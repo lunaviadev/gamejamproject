@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de64b016040c6a2458708b3ce2ccd2ed
+guid: 3e4cb7df611359e40886a9c5bbd08d9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: netrunnersprite_0
+      name: netrunneridlesprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c389bb5a837bb24c9fc3cd612446530
-      internalID: -1009954775
+      spriteID: 433d601758b9c894db41c39a900555f4
+      internalID: -513720743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_1
+      name: netrunneridlesprite_1
       rect:
         serializedVersion: 2
         x: 16
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e179c4dd39c854b42bb3b49e71187573
-      internalID: 2016639312
+      spriteID: c1d6946d4c4f0b3439e5196309d525b0
+      internalID: -1327913393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_2
+      name: netrunneridlesprite_2
       rect:
         serializedVersion: 2
         x: 32
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0544704b4f235914eb22b5ef9f286c27
-      internalID: 187794651
+      spriteID: fead8c061aeef5846bb090652b8a34c3
+      internalID: 1420494862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_3
+      name: netrunneridlesprite_3
       rect:
         serializedVersion: 2
         x: 0
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c489769d4c41c142addf09fc1362924
-      internalID: -885098160
+      spriteID: 82c148da47a17804f90ccba7b32596ac
+      internalID: 951493900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_4
+      name: netrunneridlesprite_4
       rect:
         serializedVersion: 2
         x: 16
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9e5c8c737e855448cf81605c2fc411
-      internalID: -92588453
+      spriteID: c23e318ab1fcdf641b09a607f88c10e0
+      internalID: -464793139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_5
+      name: netrunneridlesprite_5
       rect:
         serializedVersion: 2
         x: 32
@@ -216,134 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be6e520bd65a0b642877221716193ccb
-      internalID: -377411111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb1c3cf243fc81b499fc1d41cc6c6bf8
-      internalID: -679839615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_7
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 351838ccb70e3064da0732bbe3bf5261
-      internalID: -1196335741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e9dae5e008e1e1479e79653cff1c252
-      internalID: -275573219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbb9caef614f9e0408dcad48b74fdd36
-      internalID: 1665351210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_10
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 826e9d7476952c445beeec86335716d6
-      internalID: 1006963373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3c5b1abf3a305409ccfad335865f68
-      internalID: 289209732
+      spriteID: 6c8ad7d4fa8c3cd42831b945f907d0b7
+      internalID: -474062980
       vertices: []
       indices: 
       edges: []
@@ -359,18 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      netrunnersprite_0: -1009954775
-      netrunnersprite_1: 2016639312
-      netrunnersprite_10: 1006963373
-      netrunnersprite_11: 289209732
-      netrunnersprite_2: 187794651
-      netrunnersprite_3: -885098160
-      netrunnersprite_4: -92588453
-      netrunnersprite_5: -377411111
-      netrunnersprite_6: -679839615
-      netrunnersprite_7: -1196335741
-      netrunnersprite_8: -275573219
-      netrunnersprite_9: 1665351210
+      netrunneridlesprite_0: -513720743
+      netrunneridlesprite_1: -1327913393
+      netrunneridlesprite_2: 1420494862
+      netrunneridlesprite_3: 951493900
+      netrunneridlesprite_4: -464793139
+      netrunneridlesprite_5: -474062980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

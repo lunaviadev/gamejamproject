@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de64b016040c6a2458708b3ce2ccd2ed
+guid: 1020170eca7bb954abcca61c6a7068c8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: netrunnersprite_0
+      name: netrunnerspecial_0
       rect:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c389bb5a837bb24c9fc3cd612446530
-      internalID: -1009954775
+      spriteID: 9de22fd5451d8434c80814ea7730cbe0
+      internalID: 1069637802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_1
+      name: netrunnerspecial_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 20
         y: 48
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +132,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e179c4dd39c854b42bb3b49e71187573
-      internalID: 2016639312
+      spriteID: e3b9433ed0d0e0e40b9ec45329e9143c
+      internalID: 602115969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_2
+      name: netrunnerspecial_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 48
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0544704b4f235914eb22b5ef9f286c27
-      internalID: 187794651
+      spriteID: fba70fa37f2875d42a144a50cc66ad18
+      internalID: -1566452334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_3
+      name: netrunnerspecial_3
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c489769d4c41c142addf09fc1362924
-      internalID: -885098160
+      spriteID: d58d506cb9849aa429c8f01745e7a07c
+      internalID: -816041508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_4
+      name: netrunnerspecial_4
       rect:
         serializedVersion: 2
-        x: 16
+        x: 20
         y: 32
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9e5c8c737e855448cf81605c2fc411
-      internalID: -92588453
+      spriteID: 3da15c90a3131e24cb303083cae649ab
+      internalID: 1083380925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_5
+      name: netrunnerspecial_5
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 32
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be6e520bd65a0b642877221716193ccb
-      internalID: -377411111
+      spriteID: 68654ead79b5d4044ba31914240d713e
+      internalID: 1362873407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_6
+      name: netrunnerspecial_6
       rect:
         serializedVersion: 2
         x: 0
         y: 16
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb1c3cf243fc81b499fc1d41cc6c6bf8
-      internalID: -679839615
+      spriteID: 257c5ae1ca2a84b47b89e228b538a654
+      internalID: -218075650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_7
+      name: netrunnerspecial_7
       rect:
         serializedVersion: 2
-        x: 16
+        x: 20
         y: 16
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -258,19 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 351838ccb70e3064da0732bbe3bf5261
-      internalID: -1196335741
+      spriteID: 9af547a71e45f5d48b6238bcec3ad1ae
+      internalID: -732219934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_8
+      name: netrunnerspecial_8
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 16
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -279,19 +279,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9dae5e008e1e1479e79653cff1c252
-      internalID: -275573219
+      spriteID: a1fa0f8180800e84eaad091a3521f22b
+      internalID: -1703364769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_9
+      name: netrunnerspecial_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -300,19 +300,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb9caef614f9e0408dcad48b74fdd36
-      internalID: 1665351210
+      spriteID: 463d0b0365b5c8146b683622a06c0ea7
+      internalID: 979460342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: netrunnersprite_10
+      name: netrunnerspecial_10
       rect:
         serializedVersion: 2
-        x: 16
+        x: 20
         y: 0
-        width: 16
+        width: 20
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -321,29 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826e9d7476952c445beeec86335716d6
-      internalID: 1006963373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netrunnersprite_11
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3c5b1abf3a305409ccfad335865f68
-      internalID: 289209732
+      spriteID: 1ac413e5bb35f5142a44456d3759cfc0
+      internalID: -1164455169
       vertices: []
       indices: 
       edges: []
@@ -359,18 +338,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      netrunnersprite_0: -1009954775
-      netrunnersprite_1: 2016639312
-      netrunnersprite_10: 1006963373
-      netrunnersprite_11: 289209732
-      netrunnersprite_2: 187794651
-      netrunnersprite_3: -885098160
-      netrunnersprite_4: -92588453
-      netrunnersprite_5: -377411111
-      netrunnersprite_6: -679839615
-      netrunnersprite_7: -1196335741
-      netrunnersprite_8: -275573219
-      netrunnersprite_9: 1665351210
+      netrunnerspecial_0: 1069637802
+      netrunnerspecial_1: 602115969
+      netrunnerspecial_10: -1164455169
+      netrunnerspecial_2: -1566452334
+      netrunnerspecial_3: -816041508
+      netrunnerspecial_4: 1083380925
+      netrunnerspecial_5: 1362873407
+      netrunnerspecial_6: -218075650
+      netrunnerspecial_7: -732219934
+      netrunnerspecial_8: -1703364769
+      netrunnerspecial_9: 979460342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
