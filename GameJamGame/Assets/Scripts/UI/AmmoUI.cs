@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+
 public class AmmoUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI ammoText;
@@ -20,16 +21,25 @@ public class AmmoUI : MonoBehaviour
             return;
         }
 
-        // If reloading, show reload message
+        // If reloading, show reload message and update mag/reserve
         if (weaponShooter.IsReloading)
         {
             reloadText.gameObject.SetActive(true);
-            ammoText.text = $"0 / {weaponShooter.CurrentWeapon.magazineSize}";
+            ammoText.text = $"Reloading... {weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
         }
         else
         {
             reloadText.gameObject.SetActive(false);
-            ammoText.text = $"{weaponShooter.CurrentAmmo} / {weaponShooter.CurrentWeapon.magazineSize}";
+
+            // Show out-of-ammo message if mag + reserve = 0
+            if (weaponShooter.CurrentAmmo == 0 && weaponShooter.CurrentReserveAmmo == 0)
+            {
+                ammoText.text = "No Ammo";
+            }
+            else
+            {
+                ammoText.text = $"{weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
+            }
         }
     }
 }

@@ -1,0 +1,17 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "NewEnemy", menuName = "Enemies/EnemyData")]
+public class EnemyData : ScriptableObject
+{
+    [Header("Stats")]
+    public string enemyName;
+    public int maxHealth = 5;
+    public float moveSpeed = 2f;
+    public float fireRate = 1f;
+    public float bulletSpeed = 10f;
+    public int bulletDamage = 1;
+
+    [Header("Behavior")]
+    public float detectionRange = 10f;
+    public BulletPattern bulletPattern; // reference to a bullet pattern
+}

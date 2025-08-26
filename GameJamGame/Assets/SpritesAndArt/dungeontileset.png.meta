@@ -604,7 +604,7 @@ TextureImporter:
       name: dungeontileset_24
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 112
         width: 16
         height: 16
@@ -625,7 +625,7 @@ TextureImporter:
       name: dungeontileset_25
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 112
         width: 16
         height: 16
@@ -646,7 +646,7 @@ TextureImporter:
       name: dungeontileset_26
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 112
         width: 16
         height: 16
@@ -667,7 +667,7 @@ TextureImporter:
       name: dungeontileset_27
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 112
         width: 16
         height: 16
@@ -688,7 +688,7 @@ TextureImporter:
       name: dungeontileset_28
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 112
         width: 16
         height: 16
@@ -793,7 +793,7 @@ TextureImporter:
       name: dungeontileset_33
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 96
         width: 16
         height: 16
@@ -814,7 +814,7 @@ TextureImporter:
       name: dungeontileset_34
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 96
         width: 16
         height: 16
@@ -835,8 +835,8 @@ TextureImporter:
       name: dungeontileset_35
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 96
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -856,8 +856,8 @@ TextureImporter:
       name: dungeontileset_36
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
+        x: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -877,8 +877,8 @@ TextureImporter:
       name: dungeontileset_37
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
+        x: 128
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -898,8 +898,8 @@ TextureImporter:
       name: dungeontileset_38
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
+        x: 144
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -919,7 +919,7 @@ TextureImporter:
       name: dungeontileset_39
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 80
         width: 16
         height: 16
@@ -940,7 +940,7 @@ TextureImporter:
       name: dungeontileset_40
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 80
         width: 16
         height: 16
@@ -961,7 +961,7 @@ TextureImporter:
       name: dungeontileset_41
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 80
         width: 16
         height: 16
@@ -982,7 +982,7 @@ TextureImporter:
       name: dungeontileset_42
       rect:
         serializedVersion: 2
-        x: 112
+        x: 48
         y: 80
         width: 16
         height: 16
@@ -1003,8 +1003,8 @@ TextureImporter:
       name: dungeontileset_43
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 64
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1024,8 +1024,8 @@ TextureImporter:
       name: dungeontileset_44
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
+        x: 80
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1045,8 +1045,8 @@ TextureImporter:
       name: dungeontileset_45
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 96
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1066,8 +1066,8 @@ TextureImporter:
       name: dungeontileset_46
       rect:
         serializedVersion: 2
-        x: 48
-        y: 64
+        x: 112
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1087,7 +1087,7 @@ TextureImporter:
       name: dungeontileset_47
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -1108,7 +1108,7 @@ TextureImporter:
       name: dungeontileset_48
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 64
         width: 16
         height: 16
@@ -1129,7 +1129,7 @@ TextureImporter:
       name: dungeontileset_49
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 64
         width: 16
         height: 16
@@ -1150,7 +1150,7 @@ TextureImporter:
       name: dungeontileset_50
       rect:
         serializedVersion: 2
-        x: 112
+        x: 48
         y: 64
         width: 16
         height: 16
@@ -1163,6 +1163,216 @@ TextureImporter:
       bones: []
       spriteID: 0adcfaf6e4c419a4e81c79882d8b6381
       internalID: -1668671510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1497202e1b0a35d409fdb0e4635e89b8
+      internalID: 963916314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4191acfecfa2a004ab7256d32227f5d5
+      internalID: -1312283752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a21df996adec4409a69f6d4380cb75
+      internalID: 638230815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_54
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147323c960b4b0e40b505b74a753adaf
+      internalID: -1243044215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_55
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0a41984b9ea0e47acf5efd62739b4e
+      internalID: -1820772023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc416dfba1f77fb4ca24079c4122ed98
+      internalID: 865978539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4f5f62964a83040a3f76450c9e65ca
+      internalID: -652513854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe9ba919f045c3469d314462ed85ad4
+      internalID: -1876543901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_59
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35160d4f67112da4a8202011ccc7ab45
+      internalID: -1352115881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeontileset_60
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da9231efad6ea2439ac7259817e399c
+      internalID: -135638621
       vertices: []
       indices: 
       edges: []
@@ -1225,7 +1435,17 @@ TextureImporter:
       dungeontileset_49: 518586899
       dungeontileset_5: -1575513583
       dungeontileset_50: -1668671510
+      dungeontileset_51: 963916314
+      dungeontileset_52: -1312283752
+      dungeontileset_53: 638230815
+      dungeontileset_54: -1243044215
+      dungeontileset_55: -1820772023
+      dungeontileset_56: 865978539
+      dungeontileset_57: -652513854
+      dungeontileset_58: -1876543901
+      dungeontileset_59: -1352115881
       dungeontileset_6: -729842605
+      dungeontileset_60: -135638621
       dungeontileset_7: 1334016205
       dungeontileset_8: -238956452
       dungeontileset_9: -140842270

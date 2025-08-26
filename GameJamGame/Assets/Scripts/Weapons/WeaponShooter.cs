@@ -6,18 +6,20 @@ public class WeaponShooter : MonoBehaviour
     public Weapon currentWeapon;
     private float lastFireTime;
     private int currentAmmo;
+    private int currentReserveAmmo;
     private bool isReloading = false;
     private Rigidbody2D rb;
 
     public int CurrentAmmo => currentAmmo;
+    public int CurrentReserveAmmo => currentReserveAmmo;
     public bool IsReloading => isReloading;
     public Weapon CurrentWeapon => currentWeapon;
-
 
     public void EquipWeapon(Weapon newWeapon)
     {
         currentWeapon = newWeapon;
         currentAmmo = newWeapon.magazineSize;
+        currentReserveAmmo = newWeapon.maxAmmoReserve;
         isReloading = false;
     }
 
@@ -27,6 +29,7 @@ public class WeaponShooter : MonoBehaviour
         if (currentWeapon != null)
         {
             currentAmmo = currentWeapon.magazineSize;
+            currentReserveAmmo = currentWeapon.maxAmmoReserve;
         }
     }
 
@@ -34,7 +37,12 @@ public class WeaponShooter : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < currentWeapon.magazineSize)
+        if (Input.GetButtonDown("Fire2"))
+        {
+            UseAbilityandDropWeapon();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < currentWeapon.magazineSize && currentReserveAmmo > 0) // <-- check reserve
         {
             StartCoroutine(Reload());
             return;
@@ -49,14 +57,14 @@ public class WeaponShooter : MonoBehaviour
                 lastFireTime = Time.time;
                 currentAmmo--;
             }
-            else
+            else if (currentReserveAmmo > 0)
             {
                 StartCoroutine(Reload());
             }
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            UseAbilityandDropWeapon();
+            else
+            {
+                Debug.Log("Out of ammo for " + currentWeapon.weaponName);
+            }
         }
     }
 
@@ -79,8 +87,8 @@ public class WeaponShooter : MonoBehaviour
             bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
             bullet.SetActive(true);
 
-            bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed);
-
+            bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
+            bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
             rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
         }
     }
@@ -89,11 +97,11 @@ public class WeaponShooter : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        // TODO: Implement actual ability logic based on currentWeapon.abilityType
         Debug.Log("Used ability: " + currentWeapon.abilityType);
 
         currentWeapon = null;
         currentAmmo = 0;
+        currentReserveAmmo = 0;
         isReloading = false;
     }
 
@@ -101,7 +109,13 @@ public class WeaponShooter : MonoBehaviour
     {
         isReloading = true;
         yield return new WaitForSeconds(currentWeapon.reloadTime);
-        currentAmmo = currentWeapon.magazineSize;
+
+        int ammoNeeded = currentWeapon.magazineSize - currentAmmo;
+        int ammoToReload = Mathf.Min(ammoNeeded, currentReserveAmmo);
+
+        currentAmmo += ammoToReload;
+        currentReserveAmmo -= ammoToReload;
+
         isReloading = false;
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
