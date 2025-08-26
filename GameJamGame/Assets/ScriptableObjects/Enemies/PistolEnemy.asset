@@ -20,3 +20,9 @@ MonoBehaviour:
   bulletDamage: 1
   detectionRange: 10
   bulletPattern: {fileID: 11400000, guid: af9b84d9e1276414dad3e6f518d15432, type: 2}
+  attackDuration: 2
+  minMoveRadius: 2
+  maxMoveRadius: 5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1024

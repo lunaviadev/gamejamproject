@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39e43a3140aa134593d0d456d01d2cd, type: 3}
   m_Name: CirclePattern
   m_EditorClassIdentifier: 
-  bulletCount: 24
+  bulletCount: 12

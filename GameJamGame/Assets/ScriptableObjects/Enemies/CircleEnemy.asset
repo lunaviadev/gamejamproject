@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: CircleEnemy
   maxHealth: 5
-  moveSpeed: 2
+  moveSpeed: 10
   fireRate: 1
-  bulletSpeed: 10
+  bulletSpeed: 5
   bulletDamage: 1
   detectionRange: 10
   bulletPattern: {fileID: 11400000, guid: 179d964fc1d12194587c1de1554d0c5f, type: 2}
-  attackDuration: 2
+  attackDuration: 1
   minMoveRadius: 2
   maxMoveRadius: 5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1024

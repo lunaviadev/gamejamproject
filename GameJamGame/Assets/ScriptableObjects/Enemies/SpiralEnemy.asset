@@ -23,3 +23,6 @@ MonoBehaviour:
   attackDuration: 2
   minMoveRadius: 2
   maxMoveRadius: 5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1024

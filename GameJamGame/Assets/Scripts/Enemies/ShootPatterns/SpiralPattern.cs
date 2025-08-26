@@ -13,7 +13,7 @@ public class SpiralPattern : BulletPattern
         {
             float angle = currentAngle;
             Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-
+            
             GameObject bullet = Instantiate(bulletPrefab, enemy.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().Fire(dir, 5f, "Enemy");
 

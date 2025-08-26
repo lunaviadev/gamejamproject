@@ -16,10 +16,13 @@ public class EnemyController : MonoBehaviour
     private EnemyState currentState;
     private float stateTimer;
 
+    private Rigidbody2D rb;
+
     private void Start()
     {
         currentHealth = enemyData.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
 
         PickNewTargetPosition();
         currentState = EnemyState.Moving;
@@ -47,11 +50,20 @@ public class EnemyController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 dir = (targetPosition - (Vector2)transform.position).normalized;
-        transform.position += (Vector3)(dir * enemyData.moveSpeed * Time.deltaTime);
+        Vector2 dir = (targetPosition - (Vector2)transform.position);
+        float distanceToTarget = dir.magnitude;
+        dir.Normalize();
 
-        // Reached the spot?
-        if (Vector2.Distance(transform.position, targetPosition) <= stoppingDistance)
+        if (distanceToTarget > stoppingDistance)
+        {
+            Vector2 move = dir * enemyData.moveSpeed * Time.deltaTime;
+
+            if (move.magnitude > distanceToTarget)
+                move = dir * distanceToTarget;
+
+            rb.MovePosition(rb.position + move);
+        }
+        else
         {
             currentState = EnemyState.Attacking;
             stateTimer = enemyData.attackDuration;
@@ -83,12 +95,27 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
     private void PickNewTargetPosition()
     {
+    int attempts = 0;
+    Vector2 potentialPosition = Vector2.zero;
+    bool validPosition = false;
+
+    while (!validPosition && attempts < 20)
+    {
         Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
-        targetPosition = (Vector2)player.position + randomOffset;
+        potentialPosition = (Vector2)player.position + randomOffset;
+
+        Collider2D hit = Physics2D.OverlapCircle(potentialPosition, 0.2f, enemyData.obstacleLayer);
+        if (hit == null)
+            validPosition = true;
+
+        attempts++;
     }
+
+    targetPosition = potentialPosition;
+    }
+
 
     private void ShootAtPlayer()
     {

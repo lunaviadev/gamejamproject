@@ -19,4 +19,6 @@ public class EnemyData : ScriptableObject
     public float attackDuration = 2f;
     public float minMoveRadius = 2f;
     public float maxMoveRadius = 5f;
+    public LayerMask obstacleLayer;
+
 }

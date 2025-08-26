@@ -127,6 +127,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4441045390169858998, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_Radius
+      value: 0.15277871
+      objectReference: {fileID: 0}
+    - target: {fileID: -4441045390169858998, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000000044151587
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384147033963934039, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384147033963934039, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384147033963934039, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2384147033963934039, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.673503
@@ -170,6 +190,22 @@ PrefabInstance:
     - target: {fileID: 6641067739715647179, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
       propertyPath: m_Name
       value: PlaceholderPistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637057560776940665, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637057560776940665, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637057560776940665, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 7637057560776940665, guid: f748bdedd3868dc42a76c1e3d5bb09c5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -301,6 +337,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2087474380071014602, guid: ef28ba98f2acc954aab03116e7f38404, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 264
+      objectReference: {fileID: 0}
     - target: {fileID: 1430581812095013333, guid: ef28ba98f2acc954aab03116e7f38404, type: 3}
       propertyPath: m_Name
       value: PlaceholderShotgun
@@ -470,7 +510,7 @@ GameObject:
   - component: {fileID: 742463249}
   - component: {fileID: 742463251}
   - component: {fileID: 742463250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9045,6 +9085,14 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5918687546837193800, guid: 1f3d5a30fa6464e429d8cd80158a52c8, type: 3}
+      propertyPath: rollCooldown
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918687546837193800, guid: 1f3d5a30fa6464e429d8cd80158a52c8, type: 3}
+      propertyPath: rollDuration
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 7055242903698471487, guid: 1f3d5a30fa6464e429d8cd80158a52c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10773,7 +10821,7 @@ GameObject:
   - component: {fileID: 1873753271}
   - component: {fileID: 1873753270}
   - component: {fileID: 1873753269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
