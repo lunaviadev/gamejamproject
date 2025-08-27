@@ -1,8 +1,12 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.50f1 (f1ef1dca8bff) revision 15855389'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32581 MB
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 15610 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-08-27T11:46:51Z
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+Date: 2025-08-27T08:24:23Z
+========
+Date: 2025-08-27T12:01:53Z
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
@@ -10,21 +14,31 @@ C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+AssetImportWorker4
+========
 AssetImportWorker2
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 -projectPath
-C:/Users/kinab/Downloads/gamejamproject/GameJamGame
+C:/Users/bradl/OneDrive/Documents/GitHub/gamejamproject/GameJamGame
 -logFile
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+Logs/AssetImportWorker4.log
+-srvPort
+59306
+========
 Logs/AssetImportWorker2.log
 -srvPort
-58267
+60191
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 -job-worker-count
-9
+7
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/kinab/Downloads/gamejamproject/GameJamGame
-C:/Users/kinab/Downloads/gamejamproject/GameJamGame
+Successfully changed project path to: C:/Users/bradl/OneDrive/Documents/GitHub/gamejamproject/GameJamGame
+C:/Users/bradl/OneDrive/Documents/GitHub/gamejamproject/GameJamGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -60,17 +74,27 @@ C:/Users/kinab/Downloads/gamejamproject/GameJamGame
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [2276]  Target information:
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+Player connection [40608]  Target information:
 
-Player connection [2276]  * "[IP] 192.168.1.200 [Port] 0 [Flags] 2 [Guid] 1202334308 [EditorId] 1202334308 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [40608]  * "[IP] 192.168.0.9 [Port] 0 [Flags] 2 [Guid] 2937854310 [EditorId] 2937854310 [Version] 1048832 [Id] WindowsEditor(7,Bradley_Curtis) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [2276]  * "[IP] 25.45.239.199 [Port] 0 [Flags] 2 [Guid] 1202334308 [EditorId] 1202334308 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [40608] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [40608] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+========
+Player connection [33972]  Target information:
 
-Player connection [2276]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 1202334308 [EditorId] 1202334308 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [33972]  * "[IP] 192.168.1.200 [Port] 0 [Flags] 2 [Guid] 2670348219 [EditorId] 2670348219 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [2276] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [2276] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [33972]  * "[IP] 25.45.239.199 [Port] 0 [Flags] 2 [Guid] 2670348219 [EditorId] 2670348219 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [33972]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 2670348219 [EditorId] 2670348219 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [33972] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [33972] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -81,59 +105,99 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 4.33 ms, found 4 plugins.
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+Refreshing native plugins compatible for Editor in 6.90 ms, found 4 plugins.
+========
+Refreshing native plugins compatible for Editor in 4.39 ms, found 4 plugins.
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.50f1 (f1ef1dca8bff)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/kinab/Downloads/gamejamproject/GameJamGame/Assets
+[Subsystems] Discovering subsystems at path C:/Users/bradl/OneDrive/Documents/GitHub/gamejamproject/GameJamGame/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
+    Renderer: NVIDIA GeForce RTX 4050 Laptop GPU (ID=0x28e1)
     Vendor:   NVIDIA
-    VRAM:     11996 MB
-    Driver:   32.0.15.7688
+    VRAM:     5921 MB
+    Driver:   32.0.15.6636
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005535 seconds.
-- Loaded All Assemblies, in  0.408 seconds
+Registered in 0.006002 seconds.
+- Loaded All Assemblies, in  0.425 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.284 seconds
-Domain Reload Profiling: 681ms
-	BeginReloadAssembly (164ms)
+- Finished resetting the current domain, in  0.322 seconds
+Domain Reload Profiling: 744ms
+	BeginReloadAssembly (180ms)
+========
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006824 seconds.
+- Loaded All Assemblies, in  0.480 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.267 seconds
+Domain Reload Profiling: 731ms
+	BeginReloadAssembly (192ms)
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (133ms)
-		LoadAssemblies (152ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (177ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (131ms)
-			TypeCache.Refresh (129ms)
-				TypeCache.ScanAssembly (117ms)
+		AnalyzeDomain (136ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (123ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (284ms)
+	FinalizeReload (322ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (245ms)
+		SetupLoadedEditorAssemblies (280ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (45ms)
-			ProcessInitializeOnLoadAttributes (127ms)
-			ProcessInitializeOnLoadMethodAttributes (45ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (147ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+========
+	initialDomainReloadingComplete (69ms)
+	LoadAllAssembliesAndSetupDomain (154ms)
+		LoadAssemblies (175ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (151ms)
+			TypeCache.Refresh (150ms)
+				TypeCache.ScanAssembly (136ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (268ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (240ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (49ms)
+			ProcessInitializeOnLoadAttributes (118ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -142,152 +206,107 @@ Domain Reload Profiling: 681ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.035 seconds
-Refreshing native plugins compatible for Editor in 2.85 ms, found 4 plugins.
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+- Loaded All Assemblies, in  1.157 seconds
+Refreshing native plugins compatible for Editor in 1.76 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.713 seconds
-Domain Reload Profiling: 1725ms
-	BeginReloadAssembly (217ms)
+- Finished resetting the current domain, in  0.791 seconds
+Domain Reload Profiling: 1937ms
+	BeginReloadAssembly (166ms)
+========
+- Loaded All Assemblies, in  0.958 seconds
+Refreshing native plugins compatible for Editor in 3.56 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.737 seconds
+Domain Reload Profiling: 1677ms
+	BeginReloadAssembly (200ms)
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (694ms)
-		LoadAssemblies (595ms)
+<<<<<<<< HEAD:GameJamGame/Logs/AssetImportWorker4.log
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (898ms)
+		LoadAssemblies (722ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (236ms)
-			TypeCache.Refresh (174ms)
-				TypeCache.ScanAssembly (158ms)
-			BuildScriptInfoCaches (50ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (713ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (194ms)
+				TypeCache.ScanAssembly (178ms)
+			BuildScriptInfoCaches (58ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (792ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (585ms)
+		SetupLoadedEditorAssemblies (649ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (160ms)
-			ProcessInitializeOnLoadAttributes (293ms)
-			ProcessInitializeOnLoadMethodAttributes (108ms)
-			AfterProcessingInitializeOnLoad (17ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (360ms)
+			ProcessInitializeOnLoadMethodAttributes (133ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 4.29 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.23 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 226 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6305 unused Assets / (5.4 MB). Loaded Objects now: 7023.
-Memory consumption went from 180.7 MB to 175.3 MB.
-Total: 13.086200 ms (FindLiveObjects: 0.849500 ms CreateObjectMapping: 0.804600 ms MarkObjects: 7.091000 ms  DeleteObjects: 4.339600 ms)
+Unloading 6305 unused Assets / (4.9 MB). Loaded Objects now: 7022.
+Memory consumption went from 178.5 MB to 173.5 MB.
+Total: 12.224100 ms (FindLiveObjects: 1.015800 ms CreateObjectMapping: 1.194100 ms MarkObjects: 6.492300 ms  DeleteObjects: 3.520300 ms)
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
+========
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (641ms)
+		LoadAssemblies (539ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (154ms)
+			BuildScriptInfoCaches (52ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (738ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (609ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (181ms)
+			ProcessInitializeOnLoadAttributes (292ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+			AfterProcessingInitializeOnLoad (22ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 4.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 226 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6305 unused Assets / (4.7 MB). Loaded Objects now: 7023.
+Memory consumption went from 184.3 MB to 179.6 MB.
+Total: 11.577500 ms (FindLiveObjects: 0.842700 ms CreateObjectMapping: 1.204300 ms MarkObjects: 6.328600 ms  DeleteObjects: 3.200200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 25415.717708 seconds.
-  path: Assets/SpritesAndArt/Tiles/Water.asset
-  artifactKey: Guid(16f39644ed6a00c4faff1e9f90c6136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/Tiles/Water.asset using Guid(16f39644ed6a00c4faff1e9f90c6136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f7e7180168c8db610d56d31ff6850040') in 0.015914 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 296.210185 seconds.
-  path: Assets/SpritesAndArt/Tiles/Water.asset
-  artifactKey: Guid(16f39644ed6a00c4faff1e9f90c6136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/Tiles/Water.asset using Guid(16f39644ed6a00c4faff1e9f90c6136f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c1da38fe39207e7ac5c25b43a7b662d') in 0.0025573 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 304.405814 seconds.
-  path: Assets/SpritesAndArt/popsfx.png
-  artifactKey: Guid(eb370705518831a4997ae4386dc9da45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/popsfx.png using Guid(eb370705518831a4997ae4386dc9da45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a2e2cdb35190927b89374ddba41a9268') in 0.2438585 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/SpritesAndArt/tchuksfx.png
-  artifactKey: Guid(b5601cc1a4f93f84ba929740bc84748a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/tchuksfx.png using Guid(b5601cc1a4f93f84ba929740bc84748a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '277bf6a166601cdd0e7e2bed7abdfba1') in 0.023344 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.860536 seconds.
-  path: Assets/SpritesAndArt/blamsfx.png
-  artifactKey: Guid(ad71020ebfc6d5b47abfde7b7ef22325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/blamsfx.png using Guid(ad71020ebfc6d5b47abfde7b7ef22325) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61fe2913a5fc794c78d9061efe73fcf7') in 0.0216924 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/SpritesAndArt/chksfx.png
-  artifactKey: Guid(5a0c8f461a3abeb45bbafcbd149accc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/chksfx.png using Guid(5a0c8f461a3abeb45bbafcbd149accc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1bfcf6ec131d591383b5e2e7c42aad22') in 0.0198321 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.208657 seconds.
-  path: Assets/SpritesAndArt/blamsfx.png
-  artifactKey: Guid(ad71020ebfc6d5b47abfde7b7ef22325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/blamsfx.png using Guid(ad71020ebfc6d5b47abfde7b7ef22325) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '001ec06b92a32b0ede31f76b29b51bad') in 0.014645 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.674865 seconds.
+  Time since last request: 26304.893206 seconds.
   path: Assets/SpritesAndArt/chiksfx.png
   artifactKey: Guid(a2b5161d9b7a5b747bfe25d0bb219ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/chiksfx.png using Guid(a2b5161d9b7a5b747bfe25d0bb219ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5ec3646125295026234281b3fa59b0d') in 0.0157651 seconds
+Start importing Assets/SpritesAndArt/chiksfx.png using Guid(a2b5161d9b7a5b747bfe25d0bb219ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f30f473f57abd80cc41772ebc054194') in 0.1372815 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
-========================================================================
-Received Import Request.
-  Time since last request: 4.173142 seconds.
-  path: Assets/SpritesAndArt/chksfx.png
-  artifactKey: Guid(5a0c8f461a3abeb45bbafcbd149accc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/chksfx.png using Guid(5a0c8f461a3abeb45bbafcbd149accc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2f272c0a309437d964aa232319b2adda') in 0.0144403 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.942325 seconds.
-  path: Assets/SpritesAndArt/popsfx.png
-  artifactKey: Guid(eb370705518831a4997ae4386dc9da45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/popsfx.png using Guid(eb370705518831a4997ae4386dc9da45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54e62d27999aca966844a7ac9127ca3a') in 0.0178817 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.259394 seconds.
-  path: Assets/SpritesAndArt/shhksfx.png
-  artifactKey: Guid(88eb801c9deeece45942a5ae8b158b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/shhksfx.png using Guid(88eb801c9deeece45942a5ae8b158b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '131a920903445d71e9257146dafc1346') in 0.0162471 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.583167 seconds.
-  path: Assets/SpritesAndArt/shingsfx.png
-  artifactKey: Guid(bc16c8e1edf661b41a67df8869ffc045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/shingsfx.png using Guid(bc16c8e1edf661b41a67df8869ffc045) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '542d70f55d9874bbb1bf213dc50a5896') in 0.0238582 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.000837 seconds.
-  path: Assets/SpritesAndArt/tchuksfx.png
-  artifactKey: Guid(b5601cc1a4f93f84ba929740bc84748a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/tchuksfx.png using Guid(b5601cc1a4f93f84ba929740bc84748a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48a8af633972787c4b2effecf2862839') in 0.0160318 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
+>>>>>>>> level-making:GameJamGame/Logs/AssetImportWorker2.log
