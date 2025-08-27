@@ -55,7 +55,6 @@ public class Bullet : MonoBehaviour
             }
         }
 
-        // Despawn bullet
         gameObject.SetActive(false);
     }
 }

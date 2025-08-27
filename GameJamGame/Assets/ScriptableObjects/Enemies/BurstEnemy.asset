@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0f5f96238467047aef11f36ee0d557, type: 3}
   m_Name: BurstEnemy
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: BurstEnemy
   maxHealth: 5
-  moveSpeed: 2
+  moveSpeed: 12
   fireRate: 1
   bulletSpeed: 10
   bulletDamage: 1

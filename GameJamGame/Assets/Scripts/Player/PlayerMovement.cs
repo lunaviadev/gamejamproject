@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public float rollDuration = 0.4f;
     public float rollCooldown = 0.5f;
 
+    [Header("References")]
+    [SerializeField] private CameraFollow cameraFollow; 
+
     private Rigidbody2D rb;
     private Vector2 input;
     private bool isRolling = false;
@@ -63,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
     {
         isRolling = true;
         canRoll = false;
+        
+        if (cameraFollow != null) cameraFollow.SetZoom(true);
 
         Vector2 rollDirection = input;
         float elapsed = 0f;
@@ -78,8 +83,11 @@ public class PlayerMovement : MonoBehaviour
 
         isRolling = false;
         gameObject.layer = LayerMask.NameToLayer("Player");
+        
+        if (cameraFollow != null) cameraFollow.SetZoom(false);
 
         yield return new WaitForSeconds(rollCooldown);
         canRoll = true;
     }
+
 }
