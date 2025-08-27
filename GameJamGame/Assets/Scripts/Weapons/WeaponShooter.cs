@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class WeaponShooter : MonoBehaviour
 {
+    
+    [SerializeField] private CameraFollow cameraFollow; 
+    
     public Weapon currentWeapon;
     public WeaponHolder weaponHolder;
     private float lastFireTime;
@@ -77,29 +80,36 @@ public class WeaponShooter : MonoBehaviour
     }
 
 
-private void Shoot()
-{
-    if (weaponHolder == null || weaponHolder.activeWeaponSprite == null) return;
-
-    Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
-
-    for (int i = 0; i < currentWeapon.bulletsPerShot; i++)
+    private void Shoot()
     {
-        float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
-        Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
+        if (weaponHolder == null || weaponHolder.activeWeaponSprite == null) return;
 
-        Vector2 shootDir = spreadRot * weaponTransform.up;
+        Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
 
-        GameObject bullet = BulletPool.Instance.GetBullet();
-        bullet.transform.position = weaponTransform.position;
-        bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
-        bullet.SetActive(true);
+        for (int i = 0; i < currentWeapon.bulletsPerShot; i++)
+        {
+            float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
+            Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
 
-        bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
-        bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
-        rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
+            Vector2 shootDir = spreadRot * weaponTransform.up;
+
+            GameObject bullet = BulletPool.Instance.GetBullet();
+            bullet.transform.position = weaponTransform.position;
+            bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
+            bullet.SetActive(true);
+
+            bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
+            bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
+            rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
+        }
+        
+        if (cameraFollow != null)
+        {
+
+            cameraFollow.Shake(0.2f);
+        }
     }
-}
+
 
 
     private void UseAbilityandDropWeapon()

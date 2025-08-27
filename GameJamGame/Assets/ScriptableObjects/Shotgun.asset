@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851589d55d462f94699e67e4a5a31440, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  weaponSprite: {fileID: 21300000, guid: a15281c990864c14abd35aebbecbc7a6, type: 3}
+  weaponSprite: {fileID: -3931054236719941813, guid: 73827950aa975a7449332a622eddeb8d, type: 3}
   weaponName: TESTWEAPON
   fireRate: 0.4
   bulletSpeed: 10

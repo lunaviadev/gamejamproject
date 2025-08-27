@@ -141,6 +141,7 @@ MonoBehaviour:
   rollSpeed: 15
   rollDuration: 0.15
   rollCooldown: 0.3
+  cameraFollow: {fileID: 0}
 --- !u!114 &6840352959398558261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535f00b8233e4744f92bef419fb299f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraFollow: {fileID: 0}
   currentWeapon: {fileID: 0}
   weaponHolder: {fileID: 817683699397611062}
 --- !u!61 &3130763719694627680
@@ -467,7 +469,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a15281c990864c14abd35aebbecbc7a6, type: 3}
+  m_Sprite: {fileID: -3931054236719941813, guid: 73827950aa975a7449332a622eddeb8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
