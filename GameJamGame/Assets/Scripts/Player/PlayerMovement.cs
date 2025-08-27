@@ -67,6 +67,11 @@ public class PlayerMovement : MonoBehaviour
         isRolling = true;
         canRoll = false;
         
+        if (isRolling = true)
+        {
+            animator.SetBool("IsRolling", true);
+        }
+
         if (cameraFollow != null) cameraFollow.SetZoom(true);
 
         Vector2 rollDirection = input;
@@ -84,10 +89,13 @@ public class PlayerMovement : MonoBehaviour
         isRolling = false;
         gameObject.layer = LayerMask.NameToLayer("Player");
         
+
         if (cameraFollow != null) cameraFollow.SetZoom(false);
 
         yield return new WaitForSeconds(rollCooldown);
         canRoll = true;
+        animator.SetBool("IsRolling", false);
     }
+
 
 }
