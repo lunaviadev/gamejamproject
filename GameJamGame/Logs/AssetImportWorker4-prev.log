@@ -1,8 +1,8 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.50f1 (f1ef1dca8bff) revision 15855389'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Education' Language: 'en' Physical Memory: 32477 MB
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32581 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-08-26T14:36:49Z
+Date: 2025-08-26T16:25:56Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
@@ -12,19 +12,19 @@ C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
 -name
 AssetImportWorker4
 -projectPath
-C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
+C:/Users/kinab/Downloads/gamejamproject/GameJamGame
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-63860
+63592
 -job-worker-count
 9
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
-C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
+Successfully changed project path to: C:/Users/kinab/Downloads/gamejamproject/GameJamGame
+C:/Users/kinab/Downloads/gamejamproject/GameJamGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -60,12 +60,16 @@ C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [25408]  Target information:
+Player connection [30488]  Target information:
 
-Player connection [25408]  * "[IP] 10.4.4.159 [Port] 0 [Flags] 2 [Guid] 1723093645 [EditorId] 1723093645 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21C-02) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [30488]  * "[IP] 192.168.1.200 [Port] 0 [Flags] 2 [Guid] 2314522061 [EditorId] 2314522061 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [25408] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [25408] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [30488]  * "[IP] 25.45.239.199 [Port] 0 [Flags] 2 [Guid] 2314522061 [EditorId] 2314522061 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [30488]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 2314522061 [EditorId] 2314522061 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [30488] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [30488] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -77,77 +81,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 9.07 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.83 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.50f1 (f1ef1dca8bff)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame/Assets
+[Subsystems] Discovering subsystems at path C:/Users/kinab/Downloads/gamejamproject/GameJamGame/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
+    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
     Vendor:   NVIDIA
-    VRAM:     10053 MB
-    Driver:   32.0.15.7680
+    VRAM:     11996 MB
+    Driver:   32.0.15.7688
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
-Registered in 0.020302 seconds.
-- Loaded All Assemblies, in  0.560 seconds
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for AppleTV target not found
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for iOS target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 599 ms
-Native extension for UWP target not found
+Registered in 0.002245 seconds.
+- Loaded All Assemblies, in  0.276 seconds
 Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.091 seconds
-Domain Reload Profiling: 1648ms
-	BeginReloadAssembly (204ms)
+- Finished resetting the current domain, in  0.224 seconds
+Domain Reload Profiling: 499ms
+	BeginReloadAssembly (95ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (71ms)
-	LoadAllAssembliesAndSetupDomain (221ms)
-		LoadAssemblies (204ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (110ms)
+		LoadAssemblies (93ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (211ms)
-			TypeCache.Refresh (209ms)
-				TypeCache.ScanAssembly (191ms)
+		AnalyzeDomain (108ms)
+			TypeCache.Refresh (107ms)
+				TypeCache.ScanAssembly (98ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (1091ms)
+	FinalizeReload (224ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1039ms)
+		SetupLoadedEditorAssemblies (193ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (785ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (128ms)
-			ProcessInitializeOnLoadMethodAttributes (60ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (38ms)
+			ProcessInitializeOnLoadAttributes (99ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -156,498 +142,584 @@ Domain Reload Profiling: 1648ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.066 seconds
-Refreshing native plugins compatible for Editor in 5.98 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
+- Loaded All Assemblies, in  0.576 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.819 seconds
-Domain Reload Profiling: 3879ms
-	BeginReloadAssembly (259ms)
+- Finished resetting the current domain, in  0.520 seconds
+Domain Reload Profiling: 1093ms
+	BeginReloadAssembly (123ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (2693ms)
-		LoadAssemblies (2537ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (27ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (385ms)
+		LoadAssemblies (266ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (321ms)
-			TypeCache.Refresh (233ms)
-				TypeCache.ScanAssembly (209ms)
-			BuildScriptInfoCaches (68ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (820ms)
+		AnalyzeDomain (188ms)
+			TypeCache.Refresh (136ms)
+				TypeCache.ScanAssembly (125ms)
+			BuildScriptInfoCaches (42ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (521ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (616ms)
+		SetupLoadedEditorAssemblies (417ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (51ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (143ms)
-			ProcessInitializeOnLoadAttributes (343ms)
-			ProcessInitializeOnLoadMethodAttributes (67ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (244ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 5.94 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 2.07 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 199 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6318 unused Assets / (5.6 MB). Loaded Objects now: 6953.
-Memory consumption went from 175.4 MB to 169.8 MB.
-Total: 11.947500 ms (FindLiveObjects: 1.050700 ms CreateObjectMapping: 1.527500 ms MarkObjects: 5.906400 ms  DeleteObjects: 3.462300 ms)
+Unloading 226 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6305 unused Assets / (4.8 MB). Loaded Objects now: 7023.
+Memory consumption went from 182.5 MB to 177.7 MB.
+Total: 10.533900 ms (FindLiveObjects: 0.833200 ms CreateObjectMapping: 1.032600 ms MarkObjects: 5.518300 ms  DeleteObjects: 3.149000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 621353.364447 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - URP.mat
-  artifactKey: Guid(90722b8bd74d9aa49958562aff7bdf76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF - URP.mat using Guid(90722b8bd74d9aa49958562aff7bdf76) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '312c8b0cbc2ebb38b0882e82a1c372b2') in 2.1884468 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
+  Time since last request: 1902.257953 seconds.
+  path: Assets/SpritesAndArt/bulletsprite.png
+  artifactKey: Guid(e80e061e07822bf41979ae34c9e48fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/bulletsprite.png using Guid(e80e061e07822bf41979ae34c9e48fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a8964b26592c9e45c66c2eb09c91b370') in 0.0780557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
-  artifactKey: Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph using Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: 'b52ceefa727ce17d9621df590649a140') in 0.1760621 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset
-  artifactKey: Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Unity SDF.asset using Guid(c9adb1f542a93ae489bacfeae21e8394) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '053f179508b3d71ca89c3e78005c128f') in 0.1948437 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 92
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/SpritesAndArt/Materials/slimeenemy.mat
-  artifactKey: Guid(3e516bae6e3f2a34ca209b40235e8a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/Materials/slimeenemy.mat using Guid(3e516bae6e3f2a34ca209b40235e8a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: 'e93f0b855a1096116fd4a61986e70ff6') in 0.1276898 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Materials/Small Crate_diffuse.mat
-  artifactKey: Guid(22262639920f43d6be32430e4e58350d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Materials/Small Crate_diffuse.mat using Guid(22262639920f43d6be32430e4e58350d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: 'c68901bd4fdef096b0a5fc6f1455aa35') in 0.2070784 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 90
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.771216 seconds.
-  path: Assets/DefaultVolumeProfile.asset
-  artifactKey: Guid(03b10d5ea9d1799469278061cc4cf694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DefaultVolumeProfile.asset using Guid(03b10d5ea9d1799469278061cc4cf694) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6693bf69131c1ca4400ede5c4ebc0f53') in 0.0053427 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.811216 seconds.
-  path: Assets/TEST.mat
-  artifactKey: Guid(af2eeae7078d8f141833e17499b3f136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TEST.mat using Guid(af2eeae7078d8f141833e17499b3f136) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '03e362e2df64d5d7016a238187c74d54') in 0.1327512 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 88
-
-========================================================================
-Received Import Request.
-  Time since last request: 1713.067311 seconds.
-  path: Assets/SpritesAndArt/dungeontileset.png
-  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9ca4306b26bb6b46ffa1fd48ef3480a2') in 0.1400996 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 64
-
-========================================================================
-Received Import Request.
-  Time since last request: 81.277838 seconds.
-  path: Assets/SpritesAndArt/dungeontileset.png
-  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ec26a03ae37c303b374bd922c96e9eb') in 0.2682271 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 64
-
-========================================================================
-Received Import Request.
-  Time since last request: 50.353792 seconds.
-  path: Assets/SpritesAndArt/dungeontileset.png
-  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6892405f3f76280ca955982653ab2a3') in 0.1446361 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 80
-
-========================================================================
-Received Import Request.
-  Time since last request: 143.455253 seconds.
-  path: Assets/SpritesAndArt/dungeontileset.png
-  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0aeeca4df4fc2a338fbd44d03e88a814') in 0.1161633 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 80
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.909839 seconds.
-  path: Assets/SpritesAndArt/dungeontileset.png
-  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '51717d397146c5a1976dae1831595370') in 0.3024253 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 81
-
-========================================================================
-Received Import Request.
-  Time since last request: 355.905980 seconds.
-  path: Assets/Prefabs/Bullet.prefab
-  artifactKey: Guid(f2cd228e12118534199a15887a68c30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bullet.prefab using Guid(f2cd228e12118534199a15887a68c30a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.GameObjectInspector:DoRenderPreview(PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '866c0a6c6e2049159b96915bd0d129ae') in 0.1125492 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 97
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Prefabs/PlaceholderPistol.prefab
-  artifactKey: Guid(f748bdedd3868dc42a76c1e3d5bb09c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlaceholderPistol.prefab using Guid(f748bdedd3868dc42a76c1e3d5bb09c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c15f613b17626004f113ed624955486') in 0.0162636 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Prefabs/TestShotgunEnemy.prefab
-  artifactKey: Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/TestShotgunEnemy.prefab using Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.GameObjectInspector:DoRenderPreview(PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '70d8ad93f4a9fffb4a236500e18b2435') in 0.1233272 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 108
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Prefabs/Main Camera.prefab
-  artifactKey: Guid(9af5f2926ad4ca247958249912922536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Main Camera.prefab using Guid(9af5f2926ad4ca247958249912922536) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2fd22d5f7d1e7ad745d370e8b5104144') in 0.0032953 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Prefabs/UI.prefab
-  artifactKey: Guid(acd8ce06cfeba3c42b6d15f1f999dead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI.prefab using Guid(acd8ce06cfeba3c42b6d15f1f999dead) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '350d0b220fc2396ddfb790ee9ccd225d') in 0.0335396 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Prefabs/PlaceholderShotgun.prefab
-  artifactKey: Guid(ef28ba98f2acc954aab03116e7f38404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlaceholderShotgun.prefab using Guid(ef28ba98f2acc954aab03116e7f38404) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.GameObjectInspector:DoRenderPreview(PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '5eb872d1a7f3b40366c6d3a99a811d20') in 0.0836138 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 106
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(1f3d5a30fa6464e429d8cd80158a52c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(1f3d5a30fa6464e429d8cd80158a52c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.GameObjectInspector:DoRenderPreview(PreviewData)
-UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: 'f1513c998507381373a40ff1528b189e') in 0.0972283 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 138
+  Time since last request: 16.334408 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60f7ab2e567f81f93fce8c978da83b84') in 0.3363509 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.246 seconds
-Refreshing native plugins compatible for Editor in 7.72 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
+- Loaded All Assemblies, in  0.582 seconds
+Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.985 seconds
-Domain Reload Profiling: 2228ms
-	BeginReloadAssembly (349ms)
+- Finished resetting the current domain, in  0.584 seconds
+Domain Reload Profiling: 1166ms
+	BeginReloadAssembly (176ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
+		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (74ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (773ms)
-		LoadAssemblies (742ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (347ms)
+		LoadAssemblies (277ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (232ms)
-			TypeCache.Refresh (8ms)
+		AnalyzeDomain (143ms)
+			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (205ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (986ms)
+			BuildScriptInfoCaches (124ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (585ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (784ms)
+		SetupLoadedEditorAssemblies (430ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (60ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (179ms)
-			ProcessInitializeOnLoadAttributes (367ms)
-			ProcessInitializeOnLoadMethodAttributes (164ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (100ms)
+			ProcessInitializeOnLoadAttributes (261ms)
+			ProcessInitializeOnLoadMethodAttributes (59ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 8.35 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 59 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6299 unused Assets / (3.8 MB). Loaded Objects now: 7092.
-Memory consumption went from 162.4 MB to 158.6 MB.
-Total: 12.406400 ms (FindLiveObjects: 1.226900 ms CreateObjectMapping: 1.612700 ms MarkObjects: 6.228600 ms  DeleteObjects: 3.336400 ms)
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6304 unused Assets / (5.0 MB). Loaded Objects now: 7064.
+Memory consumption went from 155.4 MB to 150.4 MB.
+Total: 11.793600 ms (FindLiveObjects: 0.610000 ms CreateObjectMapping: 0.887000 ms MarkObjects: 6.141200 ms  DeleteObjects: 4.153600 ms)
 
 Prepare: number of updated asset objects reloaded= 0
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Import Request.
+  Time since last request: 22.712752 seconds.
+  path: Assets/Scenes/Level 1.unity
+  artifactKey: Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 1.unity using Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bbbab6564e07e667787753c07084b06a') in 0.006288 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.861178 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d307ae1b77a72fa5558f8f8630797a0') in 0.3721105 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.147960 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb2744f49751acbaa482cef8ecfd6d01') in 0.0161549 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.098185 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74d5196694c4d530997ea35a924faf0e') in 0.0075904 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.167052 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4102da8594e8695c412e52b9e3517ee') in 0.013134 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.575276 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a3daf00f70b180e717ae9fa9d061890') in 0.0102032 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.059949 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '610d40f7a31300fe0ed4df2671ca6079') in 0.0344777 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefabs/TestShotgunEnemy.prefab
+  artifactKey: Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TestShotgunEnemy.prefab using Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a6fc0529184929f533e0118d7e256ae') in 0.0223288 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.879387 seconds.
+  path: Assets/Prefabs/EnemyPlaceholder.prefab
+  artifactKey: Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyPlaceholder.prefab using Guid(99fdec2f9636b6341a0d9d5d68bc2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '28c5071b7a7a044aa42d0ef53f07ceb3') in 0.0292096 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.473727 seconds.
+  path: Assets/Prefabs/Main Camera.prefab
+  artifactKey: Guid(9af5f2926ad4ca247958249912922536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Main Camera.prefab using Guid(9af5f2926ad4ca247958249912922536) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd8e37a7be61d9c847c0cecb1c51829e') in 0.0034322 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.577913 seconds.
+  path: Assets/Scenes/Level 1.unity
+  artifactKey: Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 1.unity using Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88ca58a81a2849f9efc982ca4f98f591') in 0.0005241 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.547 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.486 seconds
+Domain Reload Profiling: 1033ms
+	BeginReloadAssembly (171ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (320ms)
+		LoadAssemblies (249ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (140ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (122ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (486ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (379ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (224ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 2.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6304 unused Assets / (4.9 MB). Loaded Objects now: 7088.
+Memory consumption went from 158.0 MB to 153.2 MB.
+Total: 12.199500 ms (FindLiveObjects: 1.050300 ms CreateObjectMapping: 1.296600 ms MarkObjects: 6.640100 ms  DeleteObjects: 3.210900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 30.110954 seconds.
+  path: Assets/ScriptableObjects/Enemies/BurstEnemy.asset
+  artifactKey: Guid(e04f00d994328da438d1207ce1faccc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Enemies/BurstEnemy.asset using Guid(e04f00d994328da438d1207ce1faccc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c14ca20b726131bd05b80ba20476adc0') in 0.0203184 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/ScriptableObjects/Enemies/PistolEnemy.asset
+  artifactKey: Guid(1674bd97b52006c479fa3873722e781f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Enemies/PistolEnemy.asset using Guid(1674bd97b52006c479fa3873722e781f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a05a3a33593cdfc4970d3a5cd12ec4d4') in 0.0012491 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/ScriptableObjects/Enemies/SpiralEnemy.asset
+  artifactKey: Guid(185b5157234aef64f93ee52d3147b315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Enemies/SpiralEnemy.asset using Guid(185b5157234aef64f93ee52d3147b315) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6ff685eef95a0829f7ab70c6da11a0e1') in 0.0012175 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.546 seconds
+Refreshing native plugins compatible for Editor in 0.91 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.480 seconds
+Domain Reload Profiling: 1025ms
+	BeginReloadAssembly (164ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (326ms)
+		LoadAssemblies (260ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (140ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (124ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (481ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (369ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (220ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 2.38 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6303 unused Assets / (4.8 MB). Loaded Objects now: 7090.
+Memory consumption went from 157.9 MB to 153.1 MB.
+Total: 12.032300 ms (FindLiveObjects: 0.963100 ms CreateObjectMapping: 1.111300 ms MarkObjects: 6.445800 ms  DeleteObjects: 3.510500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 34.094057 seconds.
+  path: Assets/ScriptableObjects/Pistol.asset
+  artifactKey: Guid(14d922deeeefd1049a62873370967db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Pistol.asset using Guid(14d922deeeefd1049a62873370967db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54c73623b21b335b4c480854127d9d40') in 0.0188564 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.993816 seconds.
+  path: Assets/Rendering/2DR.asset
+  artifactKey: Guid(cc4faddce2432224a902f46ee55a7f9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rendering/2DR.asset using Guid(cc4faddce2432224a902f46ee55a7f9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e22472300ca732c8ac949ab327c4b39b') in 0.0022431 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.538 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.497 seconds
+Domain Reload Profiling: 1035ms
+	BeginReloadAssembly (156ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (327ms)
+		LoadAssemblies (247ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (133ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (497ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (387ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (233ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6303 unused Assets / (5.0 MB). Loaded Objects now: 7092.
+Memory consumption went from 158.0 MB to 153.0 MB.
+Total: 12.486500 ms (FindLiveObjects: 0.750700 ms CreateObjectMapping: 0.695500 ms MarkObjects: 7.344900 ms  DeleteObjects: 3.693100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.517 seconds
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.539 seconds
+Domain Reload Profiling: 1055ms
+	BeginReloadAssembly (154ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (308ms)
+		LoadAssemblies (240ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (135ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (119ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (539ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (422ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (274ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 1.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6303 unused Assets / (4.4 MB). Loaded Objects now: 7094.
+Memory consumption went from 157.9 MB to 153.5 MB.
+Total: 10.656300 ms (FindLiveObjects: 0.807500 ms CreateObjectMapping: 0.902500 ms MarkObjects: 6.231700 ms  DeleteObjects: 2.713600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 81.246994 seconds.
+  path: Assets/Scenes/Level 1.unity
+  artifactKey: Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level 1.unity using Guid(335610fdec5ab9344b70984fb4a45152) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a052fae203b792f9a7cbc69d18fc43c') in 0.0121366 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.847887 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'be8e4ab70837a121a0f0f0788a3f0c67') in 0.3459139 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefabs/TestShotgunEnemy.prefab
+  artifactKey: Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TestShotgunEnemy.prefab using Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c5b3fbc8b892d2569349a8d18806efbd') in 0.0073611 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.167450 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f576f9832940a25bcee6b38f0c80ce7a') in 0.0137364 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.187361 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05b7cbb5cd1ebf198a5dc51517e78136') in 0.0067906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/TestShotgunEnemy.prefab
+  artifactKey: Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TestShotgunEnemy.prefab using Guid(c9126c794c5f5d64f9e5c83705543615) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5180cda70cfdf4b503278e71705097fb') in 0.0073204 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.411377 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c57e809539b6e8c99a5bc06d4f01a2d6') in 0.0163896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.799085 seconds.
+  path: Assets/Prefabs/EnemyBullet.prefab
+  artifactKey: Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemyBullet.prefab using Guid(e8f55563abd2840448eb727f800e190d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0aebded94f0085422f11abd8e5df1956') in 0.0226511 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.553 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.553 seconds
+Domain Reload Profiling: 1105ms
+	BeginReloadAssembly (175ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (20ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (25ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (322ms)
+		LoadAssemblies (256ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (138ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (122ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (553ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (424ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (264ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 1.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6304 unused Assets / (4.8 MB). Loaded Objects now: 7118.
+Memory consumption went from 159.7 MB to 155.0 MB.
+Total: 11.997900 ms (FindLiveObjects: 0.991700 ms CreateObjectMapping: 1.329700 ms MarkObjects: 6.799800 ms  DeleteObjects: 2.875100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 295.001671 seconds.
+  path: Assets/SpritesAndArt/dungeontileset.png
+  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf48a0ade5e7b2277c7726c02f566310') in 0.2364211 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 81
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.842443 seconds.
+  path: Assets/SpritesAndArt/dungeontileset.png
+  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e145094a3f3d8f164393e25aae10360') in 0.0768216 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
+
+========================================================================
+Received Import Request.
+  Time since last request: 151.660603 seconds.
+  path: Assets/SpritesAndArt/dungeontileset.png
+  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '86de11b9a195d8af3f06394f917efb88') in 0.2669459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.936226 seconds.
+  path: Assets/SpritesAndArt/dungeontileset.png
+  artifactKey: Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/dungeontileset.png using Guid(9555036893d5cde40956666e76405ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '374527ea1839a82706ebe9d9433c9232') in 0.2359833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 90
+
+========================================================================
+Received Import Request.
+  Time since last request: 1414.657238 seconds.
+  path: Assets/SpritesAndArt/chestsprite.png
+  artifactKey: Guid(5ab3d581d3ed40b4b941b320024a1cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpritesAndArt/chestsprite.png using Guid(5ab3d581d3ed40b4b941b320024a1cbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1a8333b3ecb6f9f58a4adab6d22b985e') in 0.0204565 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+

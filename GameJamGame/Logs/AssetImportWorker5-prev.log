@@ -1,8 +1,8 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.50f1 (f1ef1dca8bff) revision 15855389'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Education' Language: 'en' Physical Memory: 32477 MB
+OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32581 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-08-26T14:36:49Z
+Date: 2025-08-26T16:25:56Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
@@ -12,19 +12,19 @@ C:\Program Files\Unity\Hub\Editor\6000.0.50f1\Editor\Unity.exe
 -name
 AssetImportWorker5
 -projectPath
-C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
+C:/Users/kinab/Downloads/gamejamproject/GameJamGame
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-63860
+63592
 -job-worker-count
 9
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
-C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
+Successfully changed project path to: C:/Users/kinab/Downloads/gamejamproject/GameJamGame
+C:/Users/kinab/Downloads/gamejamproject/GameJamGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -60,12 +60,16 @@ C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27504]  Target information:
+Player connection [28556]  Target information:
 
-Player connection [27504]  * "[IP] 10.4.4.159 [Port] 0 [Flags] 2 [Guid] 1786090046 [EditorId] 1786090046 [Version] 1048832 [Id] WindowsEditor(7,UL04PCJL21C-02) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [28556]  * "[IP] 192.168.1.200 [Port] 0 [Flags] 2 [Guid] 1253453145 [EditorId] 1253453145 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [27504] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [27504] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28556]  * "[IP] 25.45.239.199 [Port] 0 [Flags] 2 [Guid] 1253453145 [EditorId] 1253453145 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28556]  * "[IP] 10.5.0.2 [Port] 0 [Flags] 2 [Guid] 1253453145 [EditorId] 1253453145 [Version] 1048832 [Id] WindowsEditor(7,PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28556] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28556] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -77,77 +81,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 9.09 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.05 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.50f1 (f1ef1dca8bff)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/2326296/Documents/GitHub/gamejamproject/GameJamGame/Assets
+[Subsystems] Discovering subsystems at path C:/Users/kinab/Downloads/gamejamproject/GameJamGame/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
+    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
     Vendor:   NVIDIA
-    VRAM:     10053 MB
-    Driver:   32.0.15.7680
+    VRAM:     11996 MB
+    Driver:   32.0.15.7688
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
-Registered in 0.019335 seconds.
-- Loaded All Assemblies, in  0.561 seconds
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for AppleTV target not found
-[usbmuxd] Start listen thread
-[usbmuxd] Listen thread started
-Native extension for iOS target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 603 ms
-Native extension for UWP target not found
+Registered in 0.001991 seconds.
+- Loaded All Assemblies, in  0.283 seconds
 Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.095 seconds
-Domain Reload Profiling: 1654ms
-	BeginReloadAssembly (205ms)
+- Finished resetting the current domain, in  0.227 seconds
+Domain Reload Profiling: 509ms
+	BeginReloadAssembly (103ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (71ms)
-	LoadAllAssembliesAndSetupDomain (222ms)
-		LoadAssemblies (209ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (109ms)
+		LoadAssemblies (100ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (211ms)
-			TypeCache.Refresh (209ms)
-				TypeCache.ScanAssembly (191ms)
+		AnalyzeDomain (107ms)
+			TypeCache.Refresh (106ms)
+				TypeCache.ScanAssembly (97ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1096ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (228ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1045ms)
+		SetupLoadedEditorAssemblies (197ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (790ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (63ms)
-			ProcessInitializeOnLoadAttributes (127ms)
-			ProcessInitializeOnLoadMethodAttributes (61ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (39ms)
+			ProcessInitializeOnLoadAttributes (100ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -156,198 +142,99 @@ Domain Reload Profiling: 1654ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.113 seconds
-Refreshing native plugins compatible for Editor in 6.01 ms, found 4 plugins.
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for UWP target not found
+- Loaded All Assemblies, in  0.585 seconds
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
-Failed to load: C:/Program Files/Unity/Hub/Editor/6000.0.50f1/Editor/Data/PlaybackEngines/VisionOSPlayer\x64\UnityEditor.VisionOS.Native.dll
-Native extension for VisionOS target not found
-Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.814 seconds
-Domain Reload Profiling: 3920ms
-	BeginReloadAssembly (258ms)
+- Finished resetting the current domain, in  0.526 seconds
+Domain Reload Profiling: 1107ms
+	BeginReloadAssembly (124ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (2739ms)
-		LoadAssemblies (2583ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (393ms)
+		LoadAssemblies (270ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (321ms)
-			TypeCache.Refresh (235ms)
-				TypeCache.ScanAssembly (213ms)
-			BuildScriptInfoCaches (68ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (815ms)
+		AnalyzeDomain (192ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (127ms)
+			BuildScriptInfoCaches (43ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (526ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (612ms)
+		SetupLoadedEditorAssemblies (423ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (50ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (141ms)
-			ProcessInitializeOnLoadAttributes (341ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (87ms)
+			ProcessInitializeOnLoadAttributes (248ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-WARNING: Shader Unsupported: 'Universal Render Pipeline/Terrain/Lit' - All subshaders removed
-WARNING: Shader Did you use #pragma only_renderers and omit this platform?
-WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 6.27 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 199 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6318 unused Assets / (5.6 MB). Loaded Objects now: 6953.
-Memory consumption went from 177.3 MB to 171.7 MB.
-Total: 12.094500 ms (FindLiveObjects: 1.003900 ms CreateObjectMapping: 1.438200 ms MarkObjects: 5.980600 ms  DeleteObjects: 3.670300 ms)
+Unloading 226 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6305 unused Assets / (4.5 MB). Loaded Objects now: 7023.
+Memory consumption went from 182.4 MB to 177.9 MB.
+Total: 10.907800 ms (FindLiveObjects: 0.785100 ms CreateObjectMapping: 1.009500 ms MarkObjects: 5.934800 ms  DeleteObjects: 3.177300 ms)
 
 ========================================================================
-Received Import Request.
-  Time since last request: 621353.364642 seconds.
-  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
-  artifactKey: Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset using Guid(5302535af1044152a457ed104f1f4b91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.584 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.549 seconds
+Domain Reload Profiling: 1133ms
+	BeginReloadAssembly (170ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (348ms)
+		LoadAssemblies (280ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (146ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (128ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (550ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (432ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (96ms)
+			ProcessInitializeOnLoadAttributes (269ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6303 unused Assets / (4.4 MB). Loaded Objects now: 7026.
+Memory consumption went from 148.4 MB to 144.0 MB.
+Total: 11.979600 ms (FindLiveObjects: 0.960600 ms CreateObjectMapping: 1.205900 ms MarkObjects: 6.010300 ms  DeleteObjects: 3.801400 ms)
 
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '877463a54d82707d4e1fb1d9fb9e9708') in 2.1869847 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 93
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph
-  artifactKey: Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph using Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '53a1306d7a89364d781d13ecde1a71db') in 0.1787859 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
-  artifactKey: Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph using Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '84bee3236faa581e7b5aa4bdee19efd5') in 0.1950454 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 90
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph
-  artifactKey: Guid(a3d800b099a06e0478fb790c5e79057a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph using Guid(a3d800b099a06e0478fb790c5e79057a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipeline..ctor (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset asset) [0x00060] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\UniversalRenderPipeline.cs:216 
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006b] in .\Library\PackageCache\com.unity.render-pipelines.universal@fe5368074162\Runtime\Data\UniversalRenderPipelineAsset.cs:799 
-  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x0000b] in <f2f565d214ab4e3d9e060571ada8f3d9>:0 
-UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
-UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
-UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object, AtomicSafetyHandle)
-UnityEngine.Camera:Render_Injected(IntPtr)
-UnityEngine.Camera:Render()
-UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
-UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
-UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
-
-(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@fe5368074162/Runtime/UniversalRenderPipeline.cs Line: 216)
-
- -> (artifact id: '47fc570f43880ee9db8453849d741527') in 0.1323804 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 89
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.988717 seconds.
-  path: Assets/UniversalRenderPipelineGlobalSettings.asset
-  artifactKey: Guid(b91d61a2168535d4092584ae19dd9681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(b91d61a2168535d4092584ae19dd9681) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f89c5c848d0dee39fcc042b653ad56c') in 0.1129045 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 87
-
+Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
