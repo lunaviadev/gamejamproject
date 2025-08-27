@@ -9,32 +9,46 @@ public class PlayerMovement : MonoBehaviour
     public float deceleration = 100f;
     public Animator animator;
 
+    [Header("Dodge Roll Settings")]
+    public float rollSpeed = 15f;
+    public float rollDuration = 0.4f;
+    public float rollCooldown = 0.5f;
+
     private Rigidbody2D rb;
     private Vector2 input;
+    private bool isRolling = false;
+    private bool canRoll = true;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
-        rb.linearDamping = 0f; // we’ll handle decel manually
+        rb.linearDamping = 0f;
     }
 
     private void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-        input = new Vector2(x, y).normalized;
-        
+        if (!isRolling)
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            input = new Vector2(x, y).normalized;
+        }
+
         animator.SetFloat("Speed", rb.linearVelocity.magnitude);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canRoll && !isRolling && input != Vector2.zero)
+            StartCoroutine(DoRoll());
     }
 
     private void FixedUpdate()
     {
+        if (isRolling) return;
+
         Vector2 targetVelocity = input * moveSpeed;
         Vector2 velocity = rb.linearVelocity;
 
         Vector2 velocityDiff = targetVelocity - velocity;
-
         float accelRate = (input.magnitude > 0.1f) ? acceleration : deceleration;
 
         Vector2 movement = velocity + velocityDiff.normalized * accelRate * Time.fixedDeltaTime;
@@ -43,5 +57,29 @@ public class PlayerMovement : MonoBehaviour
             movement = targetVelocity;
 
         rb.linearVelocity = movement;
+    }
+
+    private System.Collections.IEnumerator DoRoll()
+    {
+        isRolling = true;
+        canRoll = false;
+
+        Vector2 rollDirection = input;
+        float elapsed = 0f;
+
+        gameObject.layer = LayerMask.NameToLayer("Invincible");
+
+        while (elapsed < rollDuration)
+        {
+            rb.linearVelocity = rollDirection * rollSpeed;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        isRolling = false;
+        gameObject.layer = LayerMask.NameToLayer("Player");
+
+        yield return new WaitForSeconds(rollCooldown);
+        canRoll = true;
     }
 }

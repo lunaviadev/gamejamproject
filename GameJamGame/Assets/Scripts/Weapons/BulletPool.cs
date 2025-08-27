@@ -35,10 +35,11 @@ public class BulletPool : MonoBehaviour
                 return bullet;
         }
 
-        // Expand pool if needed
         GameObject newBullet = Instantiate(bulletPrefab, transform);
         newBullet.SetActive(false);
         pool.Add(newBullet);
         return newBullet;
     }
+
+    
 }

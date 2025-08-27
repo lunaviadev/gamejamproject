@@ -9,10 +9,23 @@ public class EnemyController : MonoBehaviour
     private int currentHealth;
     private float lastShotTime;
 
+    private Vector2 targetPosition;
+    private float stoppingDistance = 0.2f;
+
+    private enum EnemyState { Moving, Attacking }
+    private EnemyState currentState;
+    private float stateTimer;
+
+    private Rigidbody2D rb;
+
     private void Start()
     {
         currentHealth = enemyData.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
+
+        PickNewTargetPosition();
+        currentState = EnemyState.Moving;
     }
 
     private void Update()
@@ -23,17 +36,86 @@ public class EnemyController : MonoBehaviour
 
         if (distance <= enemyData.detectionRange)
         {
-            Vector2 dir = (player.position - transform.position).normalized;
-            transform.position += (Vector3)(dir * enemyData.moveSpeed * Time.deltaTime);
-
-            // Shoot if cooldown passed
-            if (Time.time >= lastShotTime + enemyData.fireRate)
+            switch (currentState)
             {
-                ShootAtPlayer();
-                lastShotTime = Time.time;
+                case EnemyState.Moving:
+                    HandleMovement();
+                    break;
+                case EnemyState.Attacking:
+                    HandleAttacking();
+                    break;
             }
         }
     }
+
+    private void HandleMovement()
+    {
+        Vector2 dir = (targetPosition - (Vector2)transform.position);
+        float distanceToTarget = dir.magnitude;
+        dir.Normalize();
+
+        if (distanceToTarget > stoppingDistance)
+        {
+            Vector2 move = dir * enemyData.moveSpeed * Time.deltaTime;
+
+            if (move.magnitude > distanceToTarget)
+                move = dir * distanceToTarget;
+
+            rb.MovePosition(rb.position + move);
+        }
+        else
+        {
+            currentState = EnemyState.Attacking;
+            stateTimer = enemyData.attackDuration;
+        }
+    }
+
+    private void HandleAttacking()
+    {
+        stateTimer -= Time.deltaTime;
+
+        if (Time.time >= lastShotTime + enemyData.fireRate)
+        {
+            if (enemyData.bulletPattern != null)
+            {
+                enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
+            }
+            else
+            {
+                ShootAtPlayer();
+            }
+
+            lastShotTime = Time.time;
+        }
+
+        if (stateTimer <= 0f)
+        {
+            PickNewTargetPosition();
+            currentState = EnemyState.Moving;
+        }
+    }
+
+    private void PickNewTargetPosition()
+    {
+    int attempts = 0;
+    Vector2 potentialPosition = Vector2.zero;
+    bool validPosition = false;
+
+    while (!validPosition && attempts < 20)
+    {
+        Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
+        potentialPosition = (Vector2)player.position + randomOffset;
+
+        Collider2D hit = Physics2D.OverlapCircle(potentialPosition, 0.2f, enemyData.obstacleLayer);
+        if (hit == null)
+            validPosition = true;
+
+        attempts++;
+    }
+
+    targetPosition = potentialPosition;
+    }
+
 
     private void ShootAtPlayer()
     {
