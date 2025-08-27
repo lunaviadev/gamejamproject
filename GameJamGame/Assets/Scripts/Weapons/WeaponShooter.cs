@@ -23,11 +23,10 @@ public class WeaponShooter : MonoBehaviour
         currentReserveAmmo = newWeapon.maxAmmoReserve;
         isReloading = false;
 
-        if (weaponHolder != null && newWeapon.weaponSprite != null)
+        if (weaponHolder != null)
         {
-            weaponHolder.EquipWeaponSprite(newWeapon.weaponSprite, newWeapon.handOffset);
+            weaponHolder.EquipWeapon(newWeapon.weaponName);
         }
-
     }
 
     private void Start()
@@ -77,31 +76,31 @@ public class WeaponShooter : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+
+private void Shoot()
+{
+    if (weaponHolder == null || weaponHolder.activeWeaponSprite == null) return;
+
+    Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
+
+    for (int i = 0; i < currentWeapon.bulletsPerShot; i++)
     {
-        RotateToMouse();
+        float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
+        Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
+
+        Vector2 shootDir = spreadRot * weaponTransform.right;
+
+        GameObject bullet = BulletPool.Instance.GetBullet();
+        bullet.transform.position = weaponTransform.position;
+        bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
+        bullet.SetActive(true);
+
+        bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
+        bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
+        rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
     }
+}
 
-    private void Shoot()
-    {
-        for (int i = 0; i < currentWeapon.bulletsPerShot; i++)
-        {
-            float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
-            Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
-
-            Vector2 shootDir = spreadRot * transform.right;
-
-            GameObject bullet = BulletPool.Instance.GetBullet();
-            bullet.transform.position = transform.position;
-            bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
-            bullet.SetActive(true);
-
-            bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
-            bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
-            rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
-        }
-    }
-    
 
     private void UseAbilityandDropWeapon()
     {
@@ -113,6 +112,11 @@ public class WeaponShooter : MonoBehaviour
         currentAmmo = 0;
         currentReserveAmmo = 0;
         isReloading = false;
+        
+        if (weaponHolder != null)
+        {
+            weaponHolder.UnequipWeapon();
+        }
     }
 
     private IEnumerator Reload()
@@ -130,11 +134,4 @@ public class WeaponShooter : MonoBehaviour
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
 
-    private void RotateToMouse()
-    {
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mouseWorld - transform.position);
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-    }
 }

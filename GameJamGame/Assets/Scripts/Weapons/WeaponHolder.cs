@@ -1,47 +1,56 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class WeaponHolder : MonoBehaviour
 {
-    public SpriteRenderer weaponSpriteRenderer; 
-    private Camera mainCam;
-    private Vector2 currentOffset;
-
-    private void Start()
+    [System.Serializable]
+    public class WeaponSprite
     {
-        mainCam = Camera.main;
+        public string weaponName;
+        public SpriteRenderer spriteRenderer;
+    }
+    public List<WeaponSprite> weaponSprites = new List<WeaponSprite>();
+    public WeaponSprite activeWeaponSprite;
+
+    private void FixedUpdate()
+    {
+        RotateToMouse();
     }
 
-    private void Update()
+    public void EquipWeapon(string weaponName)
     {
-        if (!weaponSpriteRenderer.enabled) return;
+        // Hide all weapons
+        foreach (var ws in weaponSprites)
+        {
+            ws.spriteRenderer.enabled = false;
+        }
 
-        Vector3 mouseWorld = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mouseWorld - transform.position).normalized;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        // Apply offset
-        Vector3 offset = Quaternion.Euler(0, 0, angle) * currentOffset;
-        weaponSpriteRenderer.transform.localPosition = offset;
-        
-        if (angle > 90 || angle < -90)
-            weaponSpriteRenderer.flipY = true;
+        // Show the equipped one
+        activeWeaponSprite = weaponSprites.Find(w => w.weaponName == weaponName);
+        if (activeWeaponSprite != null)
+        {
+            activeWeaponSprite.spriteRenderer.enabled = true;
+        }
         else
-            weaponSpriteRenderer.flipY = false;
-    }
-
-    public void EquipWeaponSprite(Sprite weaponSprite, Vector2 offset)
-    {
-        weaponSpriteRenderer.sprite = weaponSprite;
-        weaponSpriteRenderer.enabled = true;
-        currentOffset = offset;
+        {
+            Debug.LogWarning("No weapon sprite found for: " + weaponName);
+        }
     }
 
     public void UnequipWeapon()
     {
-        weaponSpriteRenderer.sprite = null;
-        weaponSpriteRenderer.enabled = false;
-        currentOffset = Vector2.zero;
+        if (activeWeaponSprite != null)
+        {
+            activeWeaponSprite.spriteRenderer.enabled = false;
+            activeWeaponSprite = null;
+        }
+    }
+
+        private void RotateToMouse()
+    {
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mouseWorld - transform.position);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 }
