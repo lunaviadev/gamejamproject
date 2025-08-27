@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SpiralPattern
   m_EditorClassIdentifier: 
   angleIncrement: 10
-  bulletsPerShot: 6
+  bulletsPerShot: 15

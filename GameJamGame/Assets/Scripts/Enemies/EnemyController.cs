@@ -18,6 +18,9 @@ public class EnemyController : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private float collisionTimer;
+    private bool isColliding;
+
     private void Start()
     {
         currentHealth = enemyData.maxHealth;
@@ -31,6 +34,20 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         if (!player) return;
+
+        if (isColliding)
+        {
+            collisionTimer += Time.deltaTime;
+            if (collisionTimer >= 2f)
+            {
+                ForceShootAndMove();
+                collisionTimer = 0f;
+            }
+        }
+        else
+        {
+            collisionTimer = 0f;
+        }
 
         float distance = Vector2.Distance(transform.position, player.position);
 
@@ -95,27 +112,42 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private void ForceShootAndMove()
+    {
+        if (enemyData.bulletPattern != null)
+        {
+            enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
+        }
+        else
+        {
+            ShootAtPlayer();
+        }
+
+        lastShotTime = Time.time;
+        PickNewTargetPosition();
+        currentState = EnemyState.Moving;
+    }
+
     private void PickNewTargetPosition()
     {
-    int attempts = 0;
-    Vector2 potentialPosition = Vector2.zero;
-    bool validPosition = false;
+        int attempts = 0;
+        Vector2 potentialPosition = Vector2.zero;
+        bool validPosition = false;
 
-    while (!validPosition && attempts < 20)
-    {
-        Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
-        potentialPosition = (Vector2)player.position + randomOffset;
+        while (!validPosition && attempts < 20)
+        {
+            Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
+            potentialPosition = (Vector2)player.position + randomOffset;
 
-        Collider2D hit = Physics2D.OverlapCircle(potentialPosition, 0.2f, enemyData.obstacleLayer);
-        if (hit == null)
-            validPosition = true;
+            Collider2D hit = Physics2D.OverlapCircle(potentialPosition, 0.2f, enemyData.obstacleLayer);
+            if (hit == null)
+                validPosition = true;
 
-        attempts++;
+            attempts++;
+        }
+
+        targetPosition = potentialPosition;
     }
-
-    targetPosition = potentialPosition;
-    }
-
 
     private void ShootAtPlayer()
     {
@@ -138,5 +170,17 @@ public class EnemyController : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isColliding = true;
+        collisionTimer = 0f;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isColliding = false;
+        collisionTimer = 0f;
     }
 }

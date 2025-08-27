@@ -88,7 +88,7 @@ private void Shoot()
         float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
         Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
 
-        Vector2 shootDir = spreadRot * weaponTransform.right;
+        Vector2 shootDir = spreadRot * weaponTransform.up;
 
         GameObject bullet = BulletPool.Instance.GetBullet();
         bullet.transform.position = weaponTransform.position;
