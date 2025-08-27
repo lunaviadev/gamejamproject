@@ -113,7 +113,7 @@ Rigidbody2D:
     m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2056
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66914f255fcf5574a9a24cfaed4517c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   shooterTag: 
 --- !u!1 &7329656767559424076
 GameObject:
