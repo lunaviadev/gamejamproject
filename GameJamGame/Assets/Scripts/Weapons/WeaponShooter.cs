@@ -15,7 +15,7 @@ public class WeaponShooter : MonoBehaviour
     private int currentReserveAmmo;
     private bool isReloading = false;
     private Rigidbody2D rb;
-
+    public bool UsedAbility = false;
 
 
     public int CurrentAmmo => currentAmmo;
@@ -124,7 +124,7 @@ public class WeaponShooter : MonoBehaviour
     private void UseAbilityandDropWeapon()
     {
         if (currentWeapon == null) return;
-
+        UsedAbility = true;
         Debug.Log("Used ability: " + currentWeapon.abilityType);
 
         switch (currentWeapon.abilityType)

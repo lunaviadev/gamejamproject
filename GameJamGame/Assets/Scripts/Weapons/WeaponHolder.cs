@@ -19,13 +19,12 @@ public class WeaponHolder : MonoBehaviour
 
     public void EquipWeapon(string weaponName)
     {
-        // Hide all weapons
+
         foreach (var ws in weaponSprites)
         {
             ws.spriteRenderer.enabled = false;
         }
 
-        // Show the equipped one
         activeWeaponSprite = weaponSprites.Find(w => w.weaponName == weaponName);
         if (activeWeaponSprite != null)
         {

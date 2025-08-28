@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -14.55}
   m_LocalScale: {x: 1, y: 1, z: 1.3897}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70,7 +70,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -110,6 +110,10 @@ MonoBehaviour:
   smoothTime: 1.5
   lookAheadOffset: {x: 1, y: 0}
   lookAheadClamp: {x: 2, y: 1}
+  normalSize: 5
+  zoomedOutSize: 6
+  zoomSpeed: 5
+  shakeDecay: 1.5
 --- !u!114 &-2247802709068806380
 MonoBehaviour:
   m_ObjectHideFlags: 0
