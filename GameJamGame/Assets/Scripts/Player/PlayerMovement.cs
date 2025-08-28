@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 input;
-    private bool isRolling = false;
+    public bool isRolling = false;
     private bool canRoll = true;
 
     private void Awake()
