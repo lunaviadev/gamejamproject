@@ -30,7 +30,7 @@ public class Weapon : ScriptableObject
         GroundSlam,
         PiercingShot,
         TeleportShot,
-        Shield
+        BulletShield
     }
 
     [Header("References")]

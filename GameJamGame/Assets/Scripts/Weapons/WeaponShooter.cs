@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class WeaponShooter : MonoBehaviour
 {
-    
-    [SerializeField] private CameraFollow cameraFollow; 
-    
+
+    [SerializeField] private CameraFollow cameraFollow;
+    [SerializeField] private GameObject[] wordPrefabs;
+    [SerializeField] private float wordOffsetRadius = 0.5f;
+
     public Weapon currentWeapon;
     public WeaponHolder weaponHolder;
     private float lastFireTime;
@@ -13,6 +15,8 @@ public class WeaponShooter : MonoBehaviour
     private int currentReserveAmmo;
     private bool isReloading = false;
     private Rigidbody2D rb;
+
+
 
     public int CurrentAmmo => currentAmmo;
     public int CurrentReserveAmmo => currentReserveAmmo;
@@ -58,7 +62,7 @@ public class WeaponShooter : MonoBehaviour
         }
         if (isReloading) return;
 
-        
+
 
         if (Input.GetButton("Fire1") && Time.time >= lastFireTime + currentWeapon.fireRate)
         {
@@ -102,14 +106,19 @@ public class WeaponShooter : MonoBehaviour
             bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
             rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
         }
-        
+
         if (cameraFollow != null)
         {
 
             cameraFollow.Shake(0.2f);
         }
-    }
 
+        if (wordPrefabs.Length > 0)
+        {
+            SpawnWordEffect(weaponTransform.position);
+        }
+
+    }
 
 
     private void UseAbilityandDropWeapon()
@@ -118,16 +127,42 @@ public class WeaponShooter : MonoBehaviour
 
         Debug.Log("Used ability: " + currentWeapon.abilityType);
 
+        switch (currentWeapon.abilityType)
+        {
+            case Weapon.AbilityType.BulletShield:
+                ActivateBulletShield();
+                break;
+
+        }
+
         currentWeapon = null;
         currentAmmo = 0;
         currentReserveAmmo = 0;
         isReloading = false;
-        
+
         if (weaponHolder != null)
         {
             weaponHolder.UnequipWeapon();
         }
     }
+
+private void SpawnWordEffect(Vector3 spawnPos)
+{
+
+    Debug.Log("Spawning word effect!");
+    Debug.Log("Spawning word at: " + spawnPos);
+    GameObject prefab = wordPrefabs[Random.Range(0, wordPrefabs.Length)];
+    GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
+
+    word.transform.position += (Vector3)Random.insideUnitCircle * wordOffsetRadius;
+
+    float randomRot = Random.Range(0f, 360f);
+    word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
+
+    float randomScale = Random.Range(0.8f, 1.3f);
+    word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
+}
+
 
     private IEnumerator Reload()
     {
@@ -143,5 +178,56 @@ public class WeaponShooter : MonoBehaviour
         isReloading = false;
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
+
+
+    //ABILITIES
+
+private void ActivateBulletShield()
+{
+    int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1; // fallback if null
+    StartCoroutine(BulletShieldRoutine(abilityDamage));
+}
+
+private IEnumerator BulletShieldRoutine(int abilityDamage)
+{
+    int bulletCount = 16;
+    float bulletSpeed = 15f;
+    float radius = 0.5f;
+    float delayBetweenRings = 0.3f;
+    int ringCount = 3;
+
+    for (int ring = 0; ring < ringCount; ring++)
+    {
+        for (int i = 0; i < bulletCount; i++)
+        {
+            float angle = i * (360f / bulletCount);
+            Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+
+            GameObject newBullet = BulletPool.Instance.GetBullet();
+            if (newBullet != null)
+            {
+                newBullet.transform.position = (Vector2)transform.position + dir * radius;
+                newBullet.transform.rotation = Quaternion.identity;
+                newBullet.SetActive(true);
+
+                Bullet bulletComp = newBullet.GetComponent<Bullet>();
+                if (bulletComp != null)
+                {
+                    bulletComp.Fire(dir, bulletSpeed, "Player");
+                    bulletComp.damage = abilityDamage;
+                }
+                else
+                {
+                    Debug.LogWarning("Bullet prefab missing Bullet component!");
+                }
+            }
+        }
+
+        if (ring < ringCount - 1)
+            yield return new WaitForSeconds(delayBetweenRings);
+    }
+}
+
+
 
 }
