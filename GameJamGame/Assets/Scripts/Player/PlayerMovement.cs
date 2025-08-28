@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
@@ -13,9 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public float rollSpeed = 15f;
     public float rollDuration = 0.4f;
     public float rollCooldown = 0.5f;
+    public Image[] cdIcons; 
+    private int cdCount = 0;
 
     [Header("References")]
-    [SerializeField] private CameraFollow cameraFollow; 
+    [SerializeField] private CameraFollow cameraFollow;
 
     private Rigidbody2D rb;
     private Vector2 input;
@@ -66,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRolling = true;
         canRoll = false;
-        
+
         if (isRolling = true)
         {
             animator.SetBool("IsRolling", true);
@@ -88,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
         isRolling = false;
         gameObject.layer = LayerMask.NameToLayer("Player");
-        
+
 
         if (cameraFollow != null) cameraFollow.SetZoom(false);
 
@@ -97,5 +100,26 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsRolling", false);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CDObject"))
+        {
 
+            // Update UI
+            CollectCD();
+
+            // Optionally destroy the collected object
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+    public void CollectCD()
+    {
+        if (cdCount < cdIcons.Length)
+        {
+            cdIcons[cdCount].enabled = true; // Make next icon visible
+            cdCount++;
+        }
+    }
 }

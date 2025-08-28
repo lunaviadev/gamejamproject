@@ -141,7 +141,11 @@ MonoBehaviour:
   rollSpeed: 15
   rollDuration: 0.15
   rollCooldown: 0.3
+  CDCounter: 0
+  cdUIContainer: {fileID: 3529822043272011935, guid: 9387b48190757e14a96d857a6930fec2, type: 3}
+  cdiconPrefab: {fileID: 6104747706399152618, guid: 940f35feb9367384cbb8f7c2c2b0bbd4, type: 3}
   cameraFollow: {fileID: 0}
+  isRolling: 0
 --- !u!114 &6840352959398558261
 MonoBehaviour:
   m_ObjectHideFlags: 0
