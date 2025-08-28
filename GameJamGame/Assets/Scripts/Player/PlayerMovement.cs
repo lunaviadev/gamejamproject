@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(DialogueManagerTMP.IsDialogueActive) return;
+        
         if (!isRolling)
         {
             float x = Input.GetAxisRaw("Horizontal");
@@ -70,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         isRolling = true;
         canRoll = false;
 
-        if (isRolling = true)
+        if (isRolling == true)
         {
             animator.SetBool("IsRolling", true);
         }
@@ -105,10 +107,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("CDObject"))
         {
 
-            // Update UI
             CollectCD();
 
-            // Optionally destroy the collected object
             Destroy(collision.gameObject);
         }
     }
@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (cdCount < cdIcons.Length)
         {
-            cdIcons[cdCount].enabled = true; // Make next icon visible
+            cdIcons[cdCount].enabled = true;
             cdCount++;
         }
     }

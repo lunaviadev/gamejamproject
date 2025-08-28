@@ -35,6 +35,7 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
+
         currentHealth = enemyData.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         rb = GetComponent<Rigidbody2D>();

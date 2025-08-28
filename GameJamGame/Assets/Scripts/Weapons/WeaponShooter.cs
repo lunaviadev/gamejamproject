@@ -125,6 +125,10 @@ public class WeaponShooter : MonoBehaviour
 
     private void Shoot()
     {
+        if (weaponHolder == null)
+        {
+            reloadIconTransform.gameObject.SetActive(false);
+        }
         if (weaponHolder == null || weaponHolder.activeWeaponSprite == null) return;
 
         Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
@@ -199,6 +203,7 @@ public class WeaponShooter : MonoBehaviour
         if (currentWeapon == null) return;
 
         UsedAbility = true;
+        reloadIconTransform.gameObject.SetActive(false);
         Debug.Log("Used ability: " + currentWeapon.abilityType);
 
         switch (currentWeapon.abilityType)

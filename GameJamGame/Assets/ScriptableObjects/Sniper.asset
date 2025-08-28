@@ -26,4 +26,4 @@ MonoBehaviour:
   maxAmmoReserve: 5
   abilityType: 1
   bulletPrefab: {fileID: 3993684630660934768, guid: f2cd228e12118534199a15887a68c30a, type: 3}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 11753327536b94d42833a53d4cf8fa8d, type: 3}
