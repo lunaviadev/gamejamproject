@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
+
 {
     [Header("Movement Settings")]
     public float moveSpeed = 8f;
@@ -16,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public float rollCooldown = 0.5f;
     public Image[] cdIcons; 
     private int cdCount = 0;
+
+    [Header("UI — Pause")]
+    [SerializeField] private GameObject pauseMenu;
 
     [Header("References")]
     [SerializeField] private CameraFollow cameraFollow;
@@ -45,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canRoll && !isRolling && input != Vector2.zero)
             StartCoroutine(DoRoll());
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.gameObject.SetActive(!pauseMenu.gameObject.activeSelf);
+        }
     }
 
     private void FixedUpdate()

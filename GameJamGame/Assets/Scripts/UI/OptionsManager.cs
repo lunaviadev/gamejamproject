@@ -16,4 +16,5 @@ public class OptionsManager : MonoBehaviour
     {
         mainAudioMixer.SetFloat("SFXVolume", sfxVol.value);
     }
+
 }
