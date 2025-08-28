@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: -3931054236719941813, guid: 73827950aa975a7449332a622eddeb8d, type: 3}
-  weaponName: TESTWEAPON
+  weaponName: ZipGun
   fireRate: 0.4
   bulletSpeed: 10
   bulletsPerShot: 5
   spreadAngle: 10
-  recoilForce: 5
-  damage: 1
+  recoilForce: 3
+  damage: 2
   handOffset: {x: 1, y: 0}
   magazineSize: 4
   reloadTime: 2.5
-  maxAmmoReserve: 30
+  maxAmmoReserve: 12
   abilityType: 5
   bulletPrefab: {fileID: 3993684630660934768, guid: f2cd228e12118534199a15887a68c30a, type: 3}
