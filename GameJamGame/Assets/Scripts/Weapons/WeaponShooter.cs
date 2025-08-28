@@ -3,19 +3,28 @@ using UnityEngine;
 
 public class WeaponShooter : MonoBehaviour
 {
+    [Header("Camera & Effects")]
     [SerializeField] private CameraFollow cameraFollow;
     [SerializeField] private GameObject[] wordPrefabs;
     [SerializeField] private float wordOffsetRadius = 0.5f;
     [SerializeField] private GameObject knifeObject;
 
+    [Header("Reload Icon")]
+    [SerializeField] private Transform reloadIconTransform; // assign the sprite GameObject
+    [SerializeField] private float reloadIconHeight = 1.5f; // offset above player
+    [SerializeField] private float reloadIconRotationSpeed = 360f; // degrees/sec
+
+    [Header("Weapon Data")]
     public Weapon currentWeapon;
     public WeaponHolder weaponHolder;
+
+    private Rigidbody2D rb;
+    private AudioSource audioSource;
+
     private float lastFireTime;
     private int currentAmmo;
     private int currentReserveAmmo;
     private bool isReloading = false;
-    private Rigidbody2D rb;
-    private AudioSource audioSource;
     public bool UsedAbility = false;
 
     public int CurrentAmmo => currentAmmo;
@@ -23,38 +32,24 @@ public class WeaponShooter : MonoBehaviour
     public bool IsReloading => isReloading;
     public Weapon CurrentWeapon => currentWeapon;
 
-    public void EquipWeapon(Weapon newWeapon)
-    {
-        currentWeapon = newWeapon;
-        currentAmmo = newWeapon.magazineSize;
-        currentReserveAmmo = newWeapon.maxAmmoReserve;
-        isReloading = false;
-
-        if (weaponHolder != null)
-        {
-            weaponHolder.EquipWeapon(newWeapon.weaponName);
-        }
-
-        if (knifeObject != null)
-            knifeObject.SetActive(false);
-    }
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         audioSource = gameObject.AddComponent<AudioSource>();
+
         if (currentWeapon != null)
         {
             currentAmmo = currentWeapon.magazineSize;
             currentReserveAmmo = currentWeapon.maxAmmoReserve;
-            if (knifeObject != null)
-                knifeObject.SetActive(false);
+            if (knifeObject != null) knifeObject.SetActive(false);
         }
         else
         {
-            if (knifeObject != null)
-                knifeObject.SetActive(true);
+            if (knifeObject != null) knifeObject.SetActive(true);
         }
+
+        if (reloadIconTransform != null)
+            reloadIconTransform.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -71,18 +66,30 @@ public class WeaponShooter : MonoBehaviour
                 knifeObject.SetActive(false);
         }
 
+        // Update reload icon position and rotation
+        if (reloadIconTransform != null)
+        {
+            reloadIconTransform.position = transform.position + Vector3.up * reloadIconHeight;
+            if (isReloading)
+                reloadIconTransform.Rotate(0, 0, reloadIconRotationSpeed * Time.deltaTime);
+        }
+
+        // Use ability
         if (Input.GetButtonDown("Fire2"))
         {
             UseAbilityandDropWeapon();
         }
 
+        // Start reload
         if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < currentWeapon.magazineSize && currentReserveAmmo > 0)
         {
-            StartCoroutine(Reload());
+            StartCoroutine(ReloadRoutine());
             return;
         }
+
         if (isReloading) return;
 
+        // Shoot weapon
         if (Input.GetButton("Fire1") && Time.time >= lastFireTime + currentWeapon.fireRate)
         {
             if (currentAmmo > 0)
@@ -93,13 +100,27 @@ public class WeaponShooter : MonoBehaviour
             }
             else if (currentReserveAmmo > 0)
             {
-                StartCoroutine(Reload());
+                StartCoroutine(ReloadRoutine());
             }
             else
             {
                 Debug.Log("Out of ammo for " + currentWeapon.weaponName);
             }
         }
+    }
+
+    public void EquipWeapon(Weapon newWeapon)
+    {
+        currentWeapon = newWeapon;
+        currentAmmo = newWeapon.magazineSize;
+        currentReserveAmmo = newWeapon.maxAmmoReserve;
+        isReloading = false;
+
+        if (weaponHolder != null)
+            weaponHolder.EquipWeapon(newWeapon.weaponName);
+
+        if (knifeObject != null)
+            knifeObject.SetActive(false);
     }
 
     private void Shoot()
@@ -112,7 +133,6 @@ public class WeaponShooter : MonoBehaviour
         {
             float spreadOffset = currentWeapon.spreadAngle * (i - (currentWeapon.bulletsPerShot - 1) / 2f);
             Quaternion spreadRot = Quaternion.Euler(0, 0, spreadOffset);
-
             Vector2 shootDir = spreadRot * weaponTransform.up;
 
             GameObject bullet = BulletPool.Instance.GetBullet();
@@ -120,64 +140,24 @@ public class WeaponShooter : MonoBehaviour
             bullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
             bullet.SetActive(true);
 
-            bullet.GetComponent<Bullet>().Fire(shootDir, currentWeapon.bulletSpeed, "Player");
-            bullet.GetComponent<Bullet>().damage = currentWeapon.damage;
+            Bullet bulletComp = bullet.GetComponent<Bullet>();
+            if (bulletComp != null)
+            {
+                bulletComp.Fire(shootDir, currentWeapon.bulletSpeed, "Player");
+                bulletComp.damage = currentWeapon.damage;
+            }
+
             rb.AddForce(-shootDir.normalized * currentWeapon.recoilForce, ForceMode2D.Impulse);
         }
 
         if (cameraFollow != null)
-        {
             cameraFollow.Shake(0.2f);
-        }
 
         if (wordPrefabs.Length > 0)
-        {
             SpawnWordEffect(weaponTransform.position);
-        }
 
         if (currentWeapon.shootSound != null)
-        {
             audioSource.PlayOneShot(currentWeapon.shootSound);
-        }
-    }
-
-    private void UseAbilityandDropWeapon()
-    {
-        if (currentWeapon == null) return;
-        UsedAbility = true;
-        Debug.Log("Used ability: " + currentWeapon.abilityType);
-
-        switch (currentWeapon.abilityType)
-        {
-            case Weapon.AbilityType.BulletShield:
-                ActivateBulletShield();
-                break;
-
-            case Weapon.AbilityType.BulletStorm:
-                ActivateBulletStorm();
-                break;
-
-            case Weapon.AbilityType.BulletBarrage:
-                ActivateBulletBarrage();
-                break;
-
-            case Weapon.AbilityType.TeleportShot:
-                ActivateTeleportShot();
-                break;
-        }
-
-        currentWeapon = null;
-        currentAmmo = 0;
-        currentReserveAmmo = 0;
-        isReloading = false;
-
-        if (weaponHolder != null)
-        {
-            weaponHolder.UnequipWeapon();
-        }
-
-        if (knifeObject != null)
-            knifeObject.SetActive(true);
     }
 
     private void SpawnWordEffect(Vector3 spawnPos)
@@ -186,15 +166,18 @@ public class WeaponShooter : MonoBehaviour
         GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
 
         word.transform.position += (Vector3)Random.insideUnitCircle * wordOffsetRadius;
-        float randomRot = Random.Range(0f, 360f);
-        word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
+        word.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
         float randomScale = Random.Range(0.8f, 1.3f);
         word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
     }
 
-    private IEnumerator Reload()
+    private IEnumerator ReloadRoutine()
     {
         isReloading = true;
+
+        if (reloadIconTransform != null)
+            reloadIconTransform.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(currentWeapon.reloadTime);
 
         int ammoNeeded = currentWeapon.magazineSize - currentAmmo;
@@ -204,17 +187,49 @@ public class WeaponShooter : MonoBehaviour
         currentReserveAmmo -= ammoToReload;
 
         isReloading = false;
+
+        if (reloadIconTransform != null)
+            reloadIconTransform.gameObject.SetActive(false);
+
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
 
-
-    //ABILITIES
-
-    private void ActivateBulletShield()
+    private void UseAbilityandDropWeapon()
     {
-        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
-        StartCoroutine(BulletShieldRoutine(abilityDamage));
+        if (currentWeapon == null) return;
+
+        UsedAbility = true;
+        Debug.Log("Used ability: " + currentWeapon.abilityType);
+
+        switch (currentWeapon.abilityType)
+        {
+            case Weapon.AbilityType.BulletShield:
+                StartCoroutine(BulletShieldRoutine(currentWeapon.damage));
+                break;
+            case Weapon.AbilityType.BulletStorm:
+                StartCoroutine(BulletBeamRoutine(currentWeapon.damage));
+                break;
+            case Weapon.AbilityType.BulletBarrage:
+                StartCoroutine(BulletBarrageRoutine(currentWeapon.damage));
+                break;
+            case Weapon.AbilityType.TeleportShot:
+                StartCoroutine(TeleportShotRoutine(currentWeapon.damage));
+                break;
+        }
+
+        currentWeapon = null;
+        currentAmmo = 0;
+        currentReserveAmmo = 0;
+        isReloading = false;
+
+        if (weaponHolder != null)
+            weaponHolder.UnequipWeapon();
+
+        if (knifeObject != null)
+            knifeObject.SetActive(true);
     }
+
+    #region ABILITIES
 
     private IEnumerator BulletShieldRoutine(int abilityDamage)
     {
@@ -252,12 +267,6 @@ public class WeaponShooter : MonoBehaviour
         }
     }
 
-    private void ActivateBulletStorm()
-    {
-        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
-        StartCoroutine(BulletBeamRoutine(abilityDamage));
-    }
-
     private IEnumerator BulletBeamRoutine(int abilityDamage)
     {
         float beamDuration = 1.5f;
@@ -290,12 +299,6 @@ public class WeaponShooter : MonoBehaviour
             yield return new WaitForSeconds(fireInterval);
             elapsed += fireInterval;
         }
-    }
-
-        private void ActivateBulletBarrage()
-    {
-        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
-        StartCoroutine(BulletBarrageRoutine(abilityDamage));
     }
 
     private IEnumerator BulletBarrageRoutine(int abilityDamage)
@@ -336,16 +339,9 @@ public class WeaponShooter : MonoBehaviour
         }
     }
 
-    private void ActivateTeleportShot()
-    {
-        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
-        StartCoroutine(TeleportShotRoutine(abilityDamage));
-    }
-
     private IEnumerator TeleportShotRoutine(int abilityDamage)
     {
         float bulletSpeed = 20f;
-
         Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
         Vector2 shootDir = weaponTransform.up;
 
@@ -359,10 +355,11 @@ public class WeaponShooter : MonoBehaviour
             Bullet bulletComp = teleportBullet.GetComponent<Bullet>();
             if (bulletComp != null)
             {
+                bulletComp.isTeleportBullet = true;
                 bulletComp.Fire(shootDir, bulletSpeed, "Player");
                 bulletComp.damage = abilityDamage;
 
-                bulletComp.OnBulletHit += (Vector2 hitPos) =>
+                bulletComp.OnBulletHit = (Vector2 hitPos) =>
                 {
                     transform.position = hitPos;
                     teleportBullet.SetActive(false);
@@ -373,5 +370,5 @@ public class WeaponShooter : MonoBehaviour
         yield return null;
     }
 
-
+    #endregion
 }

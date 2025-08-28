@@ -180,7 +180,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3993684630660934768, guid: e8f55563abd2840448eb727f800e190d, type: 3}
   impactPrefabs:
   - {fileID: 3599704756936560756, guid: 5cf3e910e92157045b9af109a74c5e23, type: 3}
-  wordOffsetRadius: 0.5
+  OffsetRadius: 0.5
+  whiteFlashMaterial: {fileID: 2100000, guid: 78117604a77012940b7367ce0905431a, type: 2}
 --- !u!95 &1198609113414762331
 Animator:
   serializedVersion: 7

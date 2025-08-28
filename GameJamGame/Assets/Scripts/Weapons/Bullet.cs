@@ -1,6 +1,5 @@
-using UnityEngine;
 using System;
-
+using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -9,7 +8,10 @@ public class Bullet : MonoBehaviour
     private float spawnTime;
     public string shooterTag;
 
-    public event Action<Vector2> OnBulletHit;
+    // ✅ Add this
+    public bool isTeleportBullet = false;
+
+    public System.Action<Vector2> OnBulletHit;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         spawnTime = Time.time;
+        isTeleportBullet = false; // reset whenever reused from pool
     }
 
     public void Fire(Vector2 direction, float speed, string tag = "Player")
@@ -34,6 +37,12 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    
+    private void OnDisable()
+    {
+        OnBulletHit = null; // clear subscribers
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -58,7 +67,12 @@ public class Bullet : MonoBehaviour
             }
         }
 
-        OnBulletHit?.Invoke(transform.position);
+        // ✅ Only trigger teleport if this bullet was flagged
+        if (isTeleportBullet)
+        {
+            OnBulletHit?.Invoke(transform.position);
+        }
+
         gameObject.SetActive(false);
     }
 }
