@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5150547999042611531}
   m_Layer: 3
   m_Name: ZipGunBullet
-  m_TagString: Player
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  shooterTag: 
+  shooterTag: Player
 --- !u!1 &8967693242689833390
 GameObject:
   m_ObjectHideFlags: 0

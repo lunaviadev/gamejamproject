@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class WeaponShooter : MonoBehaviour
 {
-
     [SerializeField] private CameraFollow cameraFollow;
     [SerializeField] private GameObject[] wordPrefabs;
     [SerializeField] private float wordOffsetRadius = 0.5f;
@@ -15,8 +14,8 @@ public class WeaponShooter : MonoBehaviour
     private int currentReserveAmmo;
     private bool isReloading = false;
     private Rigidbody2D rb;
+    private AudioSource audioSource;
     public bool UsedAbility = false;
-
 
     public int CurrentAmmo => currentAmmo;
     public int CurrentReserveAmmo => currentReserveAmmo;
@@ -39,6 +38,7 @@ public class WeaponShooter : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioSource = gameObject.AddComponent<AudioSource>();
         if (currentWeapon != null)
         {
             currentAmmo = currentWeapon.magazineSize;
@@ -55,14 +55,12 @@ public class WeaponShooter : MonoBehaviour
             UseAbilityandDropWeapon();
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < currentWeapon.magazineSize && currentReserveAmmo > 0) // <-- check reserve
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < currentWeapon.magazineSize && currentReserveAmmo > 0)
         {
             StartCoroutine(Reload());
             return;
         }
         if (isReloading) return;
-
-
 
         if (Input.GetButton("Fire1") && Time.time >= lastFireTime + currentWeapon.fireRate)
         {
@@ -82,7 +80,6 @@ public class WeaponShooter : MonoBehaviour
             }
         }
     }
-
 
     private void Shoot()
     {
@@ -109,7 +106,6 @@ public class WeaponShooter : MonoBehaviour
 
         if (cameraFollow != null)
         {
-
             cameraFollow.Shake(0.2f);
         }
 
@@ -118,8 +114,11 @@ public class WeaponShooter : MonoBehaviour
             SpawnWordEffect(weaponTransform.position);
         }
 
+        if (currentWeapon.shootSound != null)
+        {
+            audioSource.PlayOneShot(currentWeapon.shootSound);
+        }
     }
-
 
     private void UseAbilityandDropWeapon()
     {
@@ -132,7 +131,6 @@ public class WeaponShooter : MonoBehaviour
             case Weapon.AbilityType.BulletShield:
                 ActivateBulletShield();
                 break;
-
         }
 
         currentWeapon = null;
@@ -146,23 +144,17 @@ public class WeaponShooter : MonoBehaviour
         }
     }
 
-private void SpawnWordEffect(Vector3 spawnPos)
-{
+    private void SpawnWordEffect(Vector3 spawnPos)
+    {
+        GameObject prefab = wordPrefabs[Random.Range(0, wordPrefabs.Length)];
+        GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-    Debug.Log("Spawning word effect!");
-    Debug.Log("Spawning word at: " + spawnPos);
-    GameObject prefab = wordPrefabs[Random.Range(0, wordPrefabs.Length)];
-    GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
-
-    word.transform.position += (Vector3)Random.insideUnitCircle * wordOffsetRadius;
-
-    float randomRot = Random.Range(0f, 360f);
-    word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
-
-    float randomScale = Random.Range(0.8f, 1.3f);
-    word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
-}
-
+        word.transform.position += (Vector3)Random.insideUnitCircle * wordOffsetRadius;
+        float randomRot = Random.Range(0f, 360f);
+        word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
+        float randomScale = Random.Range(0.8f, 1.3f);
+        word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
+    }
 
     private IEnumerator Reload()
     {
@@ -179,55 +171,45 @@ private void SpawnWordEffect(Vector3 spawnPos)
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
 
-
-    //ABILITIES
-
-private void ActivateBulletShield()
-{
-    int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1; // fallback if null
-    StartCoroutine(BulletShieldRoutine(abilityDamage));
-}
-
-private IEnumerator BulletShieldRoutine(int abilityDamage)
-{
-    int bulletCount = 16;
-    float bulletSpeed = 15f;
-    float radius = 0.5f;
-    float delayBetweenRings = 0.3f;
-    int ringCount = 3;
-
-    for (int ring = 0; ring < ringCount; ring++)
+    private void ActivateBulletShield()
     {
-        for (int i = 0; i < bulletCount; i++)
+        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
+        StartCoroutine(BulletShieldRoutine(abilityDamage));
+    }
+
+    private IEnumerator BulletShieldRoutine(int abilityDamage)
+    {
+        int bulletCount = 16;
+        float bulletSpeed = 15f;
+        float radius = 0.5f;
+        float delayBetweenRings = 0.3f;
+        int ringCount = 3;
+
+        for (int ring = 0; ring < ringCount; ring++)
         {
-            float angle = i * (360f / bulletCount);
-            Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
-
-            GameObject newBullet = BulletPool.Instance.GetBullet();
-            if (newBullet != null)
+            for (int i = 0; i < bulletCount; i++)
             {
-                newBullet.transform.position = (Vector2)transform.position + dir * radius;
-                newBullet.transform.rotation = Quaternion.identity;
-                newBullet.SetActive(true);
+                float angle = i * (360f / bulletCount);
+                Vector2 dir = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
-                Bullet bulletComp = newBullet.GetComponent<Bullet>();
-                if (bulletComp != null)
+                GameObject newBullet = BulletPool.Instance.GetBullet();
+                if (newBullet != null)
                 {
-                    bulletComp.Fire(dir, bulletSpeed, "Player");
-                    bulletComp.damage = abilityDamage;
-                }
-                else
-                {
-                    Debug.LogWarning("Bullet prefab missing Bullet component!");
+                    newBullet.transform.position = (Vector2)transform.position + dir * radius;
+                    newBullet.transform.rotation = Quaternion.identity;
+                    newBullet.SetActive(true);
+
+                    Bullet bulletComp = newBullet.GetComponent<Bullet>();
+                    if (bulletComp != null)
+                    {
+                        bulletComp.Fire(dir, bulletSpeed, "Player");
+                        bulletComp.damage = abilityDamage;
+                    }
                 }
             }
+
+            if (ring < ringCount - 1)
+                yield return new WaitForSeconds(delayBetweenRings);
         }
-
-        if (ring < ringCount - 1)
-            yield return new WaitForSeconds(delayBetweenRings);
     }
-}
-
-
-
 }
