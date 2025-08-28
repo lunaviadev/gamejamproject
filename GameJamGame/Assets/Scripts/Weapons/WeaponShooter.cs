@@ -6,6 +6,7 @@ public class WeaponShooter : MonoBehaviour
     [SerializeField] private CameraFollow cameraFollow;
     [SerializeField] private GameObject[] wordPrefabs;
     [SerializeField] private float wordOffsetRadius = 0.5f;
+    [SerializeField] private GameObject knifeObject;
 
     public Weapon currentWeapon;
     public WeaponHolder weaponHolder;
@@ -33,6 +34,9 @@ public class WeaponShooter : MonoBehaviour
         {
             weaponHolder.EquipWeapon(newWeapon.weaponName);
         }
+
+        if (knifeObject != null)
+            knifeObject.SetActive(false);
     }
 
     private void Start()
@@ -43,12 +47,29 @@ public class WeaponShooter : MonoBehaviour
         {
             currentAmmo = currentWeapon.magazineSize;
             currentReserveAmmo = currentWeapon.maxAmmoReserve;
+            if (knifeObject != null)
+                knifeObject.SetActive(false);
+        }
+        else
+        {
+            if (knifeObject != null)
+                knifeObject.SetActive(true);
         }
     }
 
     private void Update()
     {
-        if (currentWeapon == null) return;
+        if (currentWeapon == null)
+        {
+            if (knifeObject != null && !knifeObject.activeSelf)
+                knifeObject.SetActive(true);
+            return;
+        }
+        else
+        {
+            if (knifeObject != null && knifeObject.activeSelf)
+                knifeObject.SetActive(false);
+        }
 
         if (Input.GetButtonDown("Fire2"))
         {
@@ -131,6 +152,18 @@ public class WeaponShooter : MonoBehaviour
             case Weapon.AbilityType.BulletShield:
                 ActivateBulletShield();
                 break;
+
+            case Weapon.AbilityType.BulletStorm:
+                ActivateBulletStorm();
+                break;
+
+            case Weapon.AbilityType.BulletBarrage:
+                ActivateBulletBarrage();
+                break;
+
+            case Weapon.AbilityType.TeleportShot:
+                ActivateTeleportShot();
+                break;
         }
 
         currentWeapon = null;
@@ -142,6 +175,9 @@ public class WeaponShooter : MonoBehaviour
         {
             weaponHolder.UnequipWeapon();
         }
+
+        if (knifeObject != null)
+            knifeObject.SetActive(true);
     }
 
     private void SpawnWordEffect(Vector3 spawnPos)
@@ -170,6 +206,9 @@ public class WeaponShooter : MonoBehaviour
         isReloading = false;
         Debug.Log("Reloaded " + currentWeapon.weaponName);
     }
+
+
+    //ABILITIES
 
     private void ActivateBulletShield()
     {
@@ -212,4 +251,127 @@ public class WeaponShooter : MonoBehaviour
                 yield return new WaitForSeconds(delayBetweenRings);
         }
     }
+
+    private void ActivateBulletStorm()
+    {
+        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
+        StartCoroutine(BulletBeamRoutine(abilityDamage));
+    }
+
+    private IEnumerator BulletBeamRoutine(int abilityDamage)
+    {
+        float beamDuration = 1.5f;
+        float fireInterval = 0.02f;
+        float bulletSpeed = 25f;
+        float elapsed = 0f;
+
+        Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
+
+        while (elapsed < beamDuration)
+        {
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 dir = (mouseWorldPos - weaponTransform.position).normalized;
+
+            GameObject newBullet = BulletPool.Instance.GetBullet();
+            if (newBullet != null)
+            {
+                newBullet.transform.position = weaponTransform.position;
+                newBullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+                newBullet.SetActive(true);
+
+                Bullet bulletComp = newBullet.GetComponent<Bullet>();
+                if (bulletComp != null)
+                {
+                    bulletComp.Fire(dir, bulletSpeed, "Player");
+                    bulletComp.damage = abilityDamage;
+                }
+            }
+
+            yield return new WaitForSeconds(fireInterval);
+            elapsed += fireInterval;
+        }
+    }
+
+        private void ActivateBulletBarrage()
+    {
+        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
+        StartCoroutine(BulletBarrageRoutine(abilityDamage));
+    }
+
+    private IEnumerator BulletBarrageRoutine(int abilityDamage)
+    {
+        int waves = 5;
+        int bulletsPerWave = 12;
+        float spreadAngle = 60f;
+        float bulletSpeed = 20f;
+        float delayBetweenWaves = 0.1f;
+
+        Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
+
+        for (int wave = 0; wave < waves; wave++)
+        {
+            for (int i = 0; i < bulletsPerWave; i++)
+            {
+                float angleOffset = -spreadAngle / 2f + (spreadAngle / (bulletsPerWave - 1)) * i;
+                Quaternion rot = Quaternion.Euler(0, 0, weaponTransform.eulerAngles.z + angleOffset);
+                Vector2 dir = rot * Vector2.up;
+
+                GameObject newBullet = BulletPool.Instance.GetBullet();
+                if (newBullet != null)
+                {
+                    newBullet.transform.position = weaponTransform.position;
+                    newBullet.transform.rotation = rot;
+                    newBullet.SetActive(true);
+
+                    Bullet bulletComp = newBullet.GetComponent<Bullet>();
+                    if (bulletComp != null)
+                    {
+                        bulletComp.Fire(dir, bulletSpeed, "Player");
+                        bulletComp.damage = abilityDamage;
+                    }
+                }
+            }
+
+            yield return new WaitForSeconds(delayBetweenWaves);
+        }
+    }
+
+    private void ActivateTeleportShot()
+    {
+        int abilityDamage = currentWeapon != null ? currentWeapon.damage : 1;
+        StartCoroutine(TeleportShotRoutine(abilityDamage));
+    }
+
+    private IEnumerator TeleportShotRoutine(int abilityDamage)
+    {
+        float bulletSpeed = 20f;
+
+        Transform weaponTransform = weaponHolder.activeWeaponSprite.spriteRenderer.transform;
+        Vector2 shootDir = weaponTransform.up;
+
+        GameObject teleportBullet = BulletPool.Instance.GetBullet();
+        if (teleportBullet != null)
+        {
+            teleportBullet.transform.position = weaponTransform.position;
+            teleportBullet.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(shootDir.y, shootDir.x) * Mathf.Rad2Deg);
+            teleportBullet.SetActive(true);
+
+            Bullet bulletComp = teleportBullet.GetComponent<Bullet>();
+            if (bulletComp != null)
+            {
+                bulletComp.Fire(shootDir, bulletSpeed, "Player");
+                bulletComp.damage = abilityDamage;
+
+                bulletComp.OnBulletHit += (Vector2 hitPos) =>
+                {
+                    transform.position = hitPos;
+                    teleportBullet.SetActive(false);
+                };
+            }
+        }
+
+        yield return null;
+    }
+
+
 }

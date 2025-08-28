@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Bullet : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class Bullet : MonoBehaviour
     private float lifeTime = 2f;
     private float spawnTime;
     public string shooterTag;
+
+    public event Action<Vector2> OnBulletHit;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +29,6 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-
         if (Time.time > spawnTime + lifeTime)
         {
             gameObject.SetActive(false);
@@ -34,7 +37,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-         if (other.CompareTag(shooterTag)) return;
+        if (other.CompareTag(shooterTag)) return;
 
         if (other.CompareTag("Player"))
         {
@@ -55,6 +58,7 @@ public class Bullet : MonoBehaviour
             }
         }
 
+        OnBulletHit?.Invoke(transform.position);
         gameObject.SetActive(false);
     }
 }
