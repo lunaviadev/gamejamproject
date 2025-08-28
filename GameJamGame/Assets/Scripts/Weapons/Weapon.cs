@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+
 [CreateAssetMenu(menuName = "Weapons/Weapon")]
 public class Weapon : ScriptableObject
 {
@@ -35,4 +37,6 @@ public class Weapon : ScriptableObject
 
     [Header("References")]
     public GameObject bulletPrefab;
+
+
 }
