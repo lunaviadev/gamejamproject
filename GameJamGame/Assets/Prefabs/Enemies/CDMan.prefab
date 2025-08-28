@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2815695933277860499}
   - component: {fileID: 1198609113414762331}
   m_Layer: 7
-  m_Name: SlimeEnemy
+  m_Name: CDMan
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -572398001, guid: 672bf2c0156f6694683e010d15ed3a95, type: 3}
+  m_Sprite: {fileID: -6934398411480371317, guid: f16a6ea4aaa06594385b932c4979b59b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +156,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.25, y: 1.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -191,7 +191,7 @@ Animator:
   m_GameObject: {fileID: 494022308743547539}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed37baa004e975b4cbccb592dbb3a589, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9aa1f892cb76bf849838975b9784a977, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

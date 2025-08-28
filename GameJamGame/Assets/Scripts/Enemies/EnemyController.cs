@@ -4,6 +4,8 @@ public class EnemyController : MonoBehaviour
 {
     public EnemyData enemyData;
     public GameObject bulletPrefab;
+    [SerializeField] private GameObject[] impactPrefabs;
+    [SerializeField] private float OffsetRadius = 0.5f;
 
     private Transform player;
     private int currentHealth;
@@ -11,6 +13,7 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 targetPosition;
     private float stoppingDistance = 0.2f;
+    private Vector2 currentPosition;
 
     private enum EnemyState { Moving, Attacking }
     private EnemyState currentState;
@@ -33,6 +36,10 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+
+        currentPosition = new Vector2(transform.position.x, transform.position.y);
+
+
         if (!player) return;
 
         if (isColliding)
@@ -161,12 +168,32 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
+        if (impactPrefabs.Length > 0)
+        {
+            SpawnImpactEffect(currentPosition);
+        }
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    private void SpawnImpactEffect(Vector3 spawnPos)
+    {
+
+        Debug.Log("Spawning word effect!");
+        Debug.Log("Spawning word at: " + spawnPos);
+        GameObject prefab = impactPrefabs[Random.Range(0, impactPrefabs.Length)];
+        GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
+
+        word.transform.position += (Vector3)Random.insideUnitCircle * OffsetRadius;
+
+        float randomRot = Random.Range(0f, 360f);
+        word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
+
+        float randomScale = Random.Range(0.8f, 1.3f);
+        word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
+    }
     private void Die()
     {
         Destroy(gameObject);
