@@ -155,6 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFollow: {fileID: 0}
+  wordPrefabs: []
+  wordOffsetRadius: 0.5
   currentWeapon: {fileID: 0}
   weaponHolder: {fileID: 817683699397611062}
 --- !u!61 &3130763719694627680
