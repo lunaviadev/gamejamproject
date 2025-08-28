@@ -1,9 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyController : MonoBehaviour
 {
+    [Header("Enemy Data")]
     public EnemyData enemyData;
     public GameObject bulletPrefab;
+    [SerializeField] private GameObject[] impactPrefabs;
+    [SerializeField] private float OffsetRadius = 0.5f;
+
+    [Header("Flash Settings")]
+    [SerializeField] private int flashFlickers = 5;      // number of flashes
+    [SerializeField] private float flashDuration = 0.1f; // duration per flash
 
     private Transform player;
     private int currentHealth;
@@ -11,6 +19,7 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 targetPosition;
     private float stoppingDistance = 0.2f;
+    private Vector2 currentPosition;
 
     private enum EnemyState { Moving, Attacking }
     private EnemyState currentState;
@@ -21,11 +30,18 @@ public class EnemyController : MonoBehaviour
     private float collisionTimer;
     private bool isColliding;
 
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+
     private void Start()
     {
         currentHealth = enemyData.maxHealth;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         rb = GetComponent<Rigidbody2D>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+            originalColor = spriteRenderer.color;
 
         PickNewTargetPosition();
         currentState = EnemyState.Moving;
@@ -33,6 +49,8 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        currentPosition = transform.position;
+
         if (!player) return;
 
         if (isColliding)
@@ -74,7 +92,6 @@ public class EnemyController : MonoBehaviour
         if (distanceToTarget > stoppingDistance)
         {
             Vector2 move = dir * enemyData.moveSpeed * Time.deltaTime;
-
             if (move.magnitude > distanceToTarget)
                 move = dir * distanceToTarget;
 
@@ -94,13 +111,9 @@ public class EnemyController : MonoBehaviour
         if (Time.time >= lastShotTime + enemyData.fireRate)
         {
             if (enemyData.bulletPattern != null)
-            {
                 enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
-            }
             else
-            {
                 ShootAtPlayer();
-            }
 
             lastShotTime = Time.time;
         }
@@ -115,13 +128,9 @@ public class EnemyController : MonoBehaviour
     private void ForceShootAndMove()
     {
         if (enemyData.bulletPattern != null)
-        {
             enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
-        }
         else
-        {
             ShootAtPlayer();
-        }
 
         lastShotTime = Time.time;
         PickNewTargetPosition();
@@ -152,7 +161,6 @@ public class EnemyController : MonoBehaviour
     private void ShootAtPlayer()
     {
         GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
         Vector2 dir = (player.position - transform.position).normalized;
         newBullet.GetComponent<Bullet>().Fire(dir, enemyData.bulletSpeed, "Enemy");
         newBullet.GetComponent<Bullet>().damage = enemyData.bulletDamage;
@@ -161,10 +169,39 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
+
+        // Start flicker flash
+        if (spriteRenderer != null)
+            StartCoroutine(FlashFlicker());
+
+        if (impactPrefabs.Length > 0)
+            SpawnImpactEffect(currentPosition);
+
         if (currentHealth <= 0)
-        {
             Die();
+    }
+
+    private IEnumerator FlashFlicker()
+    {
+        for (int i = 0; i < flashFlickers; i++)
+        {
+            spriteRenderer.color = Color.white;       // flash
+            yield return new WaitForSeconds(flashDuration);
+            spriteRenderer.color = originalColor;     // revert
+            yield return new WaitForSeconds(flashDuration);
         }
+    }
+
+    private void SpawnImpactEffect(Vector3 spawnPos)
+    {
+        GameObject prefab = impactPrefabs[Random.Range(0, impactPrefabs.Length)];
+        GameObject word = Instantiate(prefab, spawnPos, Quaternion.identity);
+
+        word.transform.position += (Vector3)Random.insideUnitCircle * OffsetRadius;
+        float randomRot = Random.Range(0f, 360f);
+        word.transform.rotation = Quaternion.Euler(0f, 0f, randomRot);
+        float randomScale = Random.Range(0.8f, 1.3f);
+        word.transform.localScale = new Vector3(randomScale, randomScale, 1f);
     }
 
     private void Die()

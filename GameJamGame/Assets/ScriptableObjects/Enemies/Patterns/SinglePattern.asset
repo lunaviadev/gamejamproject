@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be56737e0c8dc146bc20e8bbd683c2c, type: 3}
-  m_Name: PistolPattern
+  m_Script: {fileID: 11500000, guid: d3b54e1efe87f6f4b95203aa39557b51, type: 3}
+  m_Name: SinglePattern
   m_EditorClassIdentifier: 
+  bulletSpeed: 9

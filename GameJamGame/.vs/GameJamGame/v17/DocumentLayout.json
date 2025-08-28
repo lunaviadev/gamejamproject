@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|c:\\users\\2326296\\documents\\github\\gamejamproject\\gamejamgame\\assets\\scripts\\enemies\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|c:\\users\\2326296\\documents\\github\\gamejamproject\\gamejamgame\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|c:\\users\\2326296\\documents\\github\\gamejamproject\\gamejamgame\\assets\\scripts\\enemies\\shootpatterns\\smgpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\shootpatterns\\smgpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|c:\\users\\2326296\\documents\\github\\gamejamproject\\gamejamgame\\assets\\scripts\\enemies\\shootpatterns\\singleshotpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\shootpatterns\\singleshotpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\enemies\\shootpatterns\\burstpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\shootpatterns\\burstpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\enemies\\shootpatterns\\straightpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\shootpatterns\\straightpattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\enemies\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemies\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\weapons\\wordeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\wordeffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\weapons\\weaponimpacteffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weaponimpacteffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\assets\\scripts\\weapons\\weaponshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F68CF24-52EC-681D-E67C-04045CC581A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weaponshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +46,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SMGPattern.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\SMGPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\ShootPatterns\\SMGPattern.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\SMGPattern.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\ShootPatterns\\SMGPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:55:46.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SingleShotPattern.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\SingleShotPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\ShootPatterns\\SingleShotPattern.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\SingleShotPattern.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\ShootPatterns\\SingleShotPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:48:51.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BurstPattern.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\BurstPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\ShootPatterns\\BurstPattern.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\BurstPattern.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\ShootPatterns\\BurstPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:31:01.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StraightPattern.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\StraightPattern.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\ShootPatterns\\StraightPattern.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\ShootPatterns\\StraightPattern.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\ShootPatterns\\StraightPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:30:28.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyData.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\EnemyData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemyData.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\EnemyData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemyData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:30:03.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeaponShooter.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WeaponShooter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WeaponShooter.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WeaponShooter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapons\\WeaponShooter.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwHUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T13:59:59.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeaponImpactEffect.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WeaponImpactEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WeaponImpactEffect.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WeaponImpactEffect.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapons\\WeaponImpactEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T13:55:08.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WordEffect.cs",
+              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WordEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WordEffect.cs",
+              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Weapons\\WordEffect.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Weapons\\WordEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T13:53:16.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwG8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-28T10:55:45.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnemyController.cs",
-              "DocumentMoniker": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\EnemyController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemies\\EnemyController.cs",
-              "ToolTip": "C:\\Users\\2326296\\Documents\\GitHub\\gamejamproject\\GameJamGame\\Assets\\Scripts\\Enemies\\EnemyController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemies\\EnemyController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAEQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T10:50:29.964Z",
               "EditorCaption": ""
             }
           ]
