@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1347972834783988846}
   - component: {fileID: -2087474380071014602}
   m_Layer: 0
-  m_Name: PlaceholderShotgun
+  m_Name: Lagspike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3931054236719941813, guid: 73827950aa975a7449332a622eddeb8d, type: 3}
+  m_Sprite: {fileID: 8863307669037608670, guid: 49a8a9b8a84375d41ad7fbc145f81ede, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c316080a0394174b8f07b51e101bf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 23f02742e1fd4854ea1b45c5f95ba3be, type: 2}
+  weaponData: {fileID: 11400000, guid: ccb5aa5e763e1bc43a672d4764d1b54f, type: 2}
 --- !u!58 &-2087474380071014602
 CircleCollider2D:
   m_ObjectHideFlags: 0

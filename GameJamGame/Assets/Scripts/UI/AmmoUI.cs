@@ -12,9 +12,23 @@ public class AmmoUI : MonoBehaviour
     [Header("Health UI")]
     [SerializeField] private List<Image> heartImages;
 
+    [Header("Weapon UI")]
+    [SerializeField] private List<Image> weaponIcons;
+    private Dictionary<string, Image> weaponIconDict = new Dictionary<string, Image>();
+    private Image currentActiveIcon;
+
     private void Start()
     {
         PlayerHealth.OnHealthChanged += UpdateHealthUI;
+
+        foreach (var icon in weaponIcons)
+        {
+            if (icon != null)
+            {
+                weaponIconDict[icon.name] = icon; 
+                icon.enabled = false;
+            }
+        }
     }
 
     private void OnDestroy()
@@ -27,29 +41,48 @@ public class AmmoUI : MonoBehaviour
         if (weaponShooter == null || weaponShooter.CurrentWeapon == null)
         {
             ammoText.text = "";
+
+            if(currentActiveIcon != null)
+            {
+                currentActiveIcon.enabled = false;
+                currentActiveIcon = null;
+            }
+
             return;
+
+
         }
 
         if (weaponShooter.IsReloading)
         {
             ammoText.text = $"Reloading... {weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
         }
+        else if (weaponShooter.CurrentAmmo == 0 && weaponShooter.CurrentReserveAmmo == 0)
+        {
+            ammoText.text = "No Ammo";
+        }
+        else
+        {
+            ammoText.text = $"{weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
+        }
 
+        string weaponName = weaponShooter.CurrentWeapon.weaponName;
 
-            if (weaponShooter.CurrentAmmo == 0 && weaponShooter.CurrentReserveAmmo == 0)
-                ammoText.text = "No Ammo";
-            else
-                ammoText.text = $"{weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
+        if (currentActiveIcon != null)
+            currentActiveIcon.enabled = false;
+
+        if (weaponIconDict.TryGetValue(weaponName, out Image newIcon))
+        {
+            newIcon.enabled = true;
+            currentActiveIcon = newIcon;
+        }
     }
 
     private void UpdateHealthUI(int currentHealth, int maxHealth)
     {
         for (int i = 0; i < heartImages.Count; i++)
         {
-            if (i < currentHealth)
-                heartImages[i].enabled = true;
-            else
-                heartImages[i].enabled = false;
+            heartImages[i].enabled = i < currentHealth;
         }
     }
 }
