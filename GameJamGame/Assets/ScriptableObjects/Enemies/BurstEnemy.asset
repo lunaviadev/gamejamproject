@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BurstEnemy
   m_EditorClassIdentifier: 
   enemyName: BurstEnemy
-  maxHealth: 5
-  moveSpeed: 12
-  fireRate: 1
-  bulletSpeed: 10
+  maxHealth: 8
+  moveSpeed: 20
+  fireRate: 5
+  bulletSpeed: 13
   bulletDamage: 1
   detectionRange: 10
   bulletPattern: {fileID: 11400000, guid: 95b444368aee9ef4d88c4b686466d401, type: 2}

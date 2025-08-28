@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb8525d85dc1945999a09afa6994fa, type: 3}
   m_Name: BurstPattern
   m_EditorClassIdentifier: 
-  bulletsPerBurst: 5
+  bulletsPerBurst: 6
   spreadAngle: 45
