@@ -34,19 +34,23 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
+    }
 
-            if (BackroundMusicSource != null && BackroundMusic != null)
+    private void Start()
     {
-        BackroundMusicSource.clip = BackroundMusic;
-        BackroundMusicSource.loop = true;
-        BackroundMusicSource.Play();
+        if (BackroundMusicSource != null && BackroundMusic != null)
+        {
+            BackroundMusicSource.clip = BackroundMusic;
+            BackroundMusicSource.loop = true;
+            BackroundMusicSource.volume = 0.3f;
+            BackroundMusicSource.Play();
+            Debug.Log("Background music started playing.");
+        }
     }
-    }
-
     private void Update()
     {
-        if(DialogueManagerTMP.IsDialogueActive) return;
-        
+        if (DialogueManagerTMP.IsDialogueActive) return;
+
         if (!isRolling)
         {
             float x = Input.GetAxisRaw("Horizontal");
