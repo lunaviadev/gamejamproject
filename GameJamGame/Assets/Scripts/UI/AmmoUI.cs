@@ -53,10 +53,6 @@ public class AmmoUI : MonoBehaviour
 
         }
 
-        if (weaponShooter.IsReloading)
-        {
-            ammoText.text = $"Reloading... {weaponShooter.CurrentAmmo} / {weaponShooter.CurrentReserveAmmo}";
-        }
         else if (weaponShooter.CurrentAmmo == 0 && weaponShooter.CurrentReserveAmmo == 0)
         {
             ammoText.text = "No Ammo";

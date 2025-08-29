@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
     {
 
 
-        if (Damaged = true)
+        if (Damaged == true)
         {
             animator.SetBool("Damaged", true);
         }

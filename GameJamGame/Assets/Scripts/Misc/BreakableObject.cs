@@ -27,6 +27,12 @@ public class BreakableObject : MonoBehaviour
                 collision.gameObject.SetActive(false);
             }
         }
+
+        if (collision.CompareTag("Knife"))
+        {
+            SpawnRandomItem();
+            collision.gameObject.SetActive(false);
+        }
     }
 
     private void SpawnRandomItem()

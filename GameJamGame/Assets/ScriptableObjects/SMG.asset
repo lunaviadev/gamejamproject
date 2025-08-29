@@ -24,5 +24,6 @@ MonoBehaviour:
   magazineSize: 20
   reloadTime: 1
   maxAmmoReserve: 40
-  abilityType: 0
+  abilityType: 2
   bulletPrefab: {fileID: 3993684630660934768, guid: f2cd228e12118534199a15887a68c30a, type: 3}
+  shootSound: {fileID: 8300000, guid: 7928bf3a6c361634c84702e8b2afb412, type: 3}

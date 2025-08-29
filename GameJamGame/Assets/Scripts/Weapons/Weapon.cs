@@ -25,9 +25,8 @@ public class Weapon : ScriptableObject
     public enum AbilityType
     {
         None,
-        ExplosiveShot,
-        GroundSlam,
-        PiercingShot,
+        BulletStorm,
+        BulletBarrage,
         TeleportShot,
         BulletShield
     }

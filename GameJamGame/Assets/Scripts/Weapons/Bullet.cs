@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -7,6 +7,12 @@ public class Bullet : MonoBehaviour
     private float lifeTime = 2f;
     private float spawnTime;
     public string shooterTag;
+
+    // ✅ Add this
+    public bool isTeleportBullet = false;
+
+    public System.Action<Vector2> OnBulletHit;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -15,6 +21,7 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         spawnTime = Time.time;
+        isTeleportBullet = false; // reset whenever reused from pool
     }
 
     public void Fire(Vector2 direction, float speed, string tag = "Player")
@@ -25,16 +32,21 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-
         if (Time.time > spawnTime + lifeTime)
         {
             gameObject.SetActive(false);
         }
     }
+    
+    private void OnDisable()
+    {
+        OnBulletHit = null; // clear subscribers
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-         if (other.CompareTag(shooterTag)) return;
+        if (other.CompareTag(shooterTag)) return;
 
         if (other.CompareTag("Player"))
         {
@@ -53,6 +65,12 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
                 Debug.Log("Enemy hit for " + damage + " damage.");
             }
+        }
+
+        // ✅ Only trigger teleport if this bullet was flagged
+        if (isTeleportBullet)
+        {
+            OnBulletHit?.Invoke(transform.position);
         }
 
         gameObject.SetActive(false);
