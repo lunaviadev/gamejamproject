@@ -19,10 +19,13 @@ MonoBehaviour:
   bulletSpeed: 15
   bulletDamage: 1
   detectionRange: 10
-  bulletPattern: {fileID: 11400000, guid: 091244aff772dae428ad9aefc43fd292, type: 2}
+  bulletPatterns:
+  - {fileID: 11400000, guid: 091244aff772dae428ad9aefc43fd292, type: 2}
   attackDuration: 2
   minMoveRadius: 2
   maxMoveRadius: 5
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1024
+  bulletScale: 1
+  patternSwitchTime: 3

@@ -13,7 +13,7 @@ public class EnemyData : ScriptableObject
 
     [Header("Behavior")]
     public float detectionRange = 10f;
-    public BulletPattern bulletPattern;
+    public BulletPattern[] bulletPatterns; 
 
     [Header("AI Behaviour")]
     public float attackDuration = 2f;
@@ -21,4 +21,7 @@ public class EnemyData : ScriptableObject
     public float maxMoveRadius = 5f;
     public LayerMask obstacleLayer;
 
+    [Header("Boss-Specific")]
+    public float bulletScale = 1f; 
+    public float patternSwitchTime = 3f;
 }

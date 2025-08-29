@@ -1,6 +1,7 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,11 +10,21 @@ public class PlayerHealth : MonoBehaviour
     public bool Damaged = false;
     public Animator animator;
     public float InvincibleDuration = 0.4f;
+    private bool isDead = false;
 
     public static event Action<int, int> OnHealthChanged;
 
     [Header("Damage Settings")]
     public List<GameObject> damagingPrefabs = new List<GameObject>();
+
+    [Header("Death Dialogue")]
+    [TextArea(2, 5)]
+    public string[] deathDialogue =
+{
+        "Your journey ends here...",
+        "The viruses consume what remains of you.",
+        "But maybe... next time, you’ll find the code."
+    };
 
     private void Start()
     {
@@ -31,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
             Die();
         }
@@ -62,12 +73,25 @@ public class PlayerHealth : MonoBehaviour
         animator.SetBool("Damaged", false);
         
     }
-    
+
 
 
     private void Die()
     {
-        Debug.Log("Player Died!");
+        if (isDead) return;
+        isDead = true;
+        GetComponent<PlayerMovement>().enabled = false;
+        DialogueManagerTMP dm = GameObject.Find("DialogueManager").GetComponent<DialogueManagerTMP>();
+
+        if (dm != null)
+        {
+            DialogueManagerTMP.OnDialogueEnded += LoadMainMenu;
+            dm.StartDialogue(deathDialogue);
+        }
+        else
+        {
+            LoadMainMenu();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -84,5 +108,10 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(1);
         }
+    }
+
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main menu");
     }
 }
