@@ -4,6 +4,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource BackroundMusicSource;
+    [SerializeField] private AudioClip BackroundMusic;
+
     [Header("Movement Settings")]
     public float moveSpeed = 8f;
     public float acceleration = 50f;
@@ -30,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0f;
+
+            if (BackroundMusicSource != null && BackroundMusic != null)
+    {
+        BackroundMusicSource.clip = BackroundMusic;
+        BackroundMusicSource.loop = true;
+        BackroundMusicSource.Play();
+    }
     }
 
     private void Update()

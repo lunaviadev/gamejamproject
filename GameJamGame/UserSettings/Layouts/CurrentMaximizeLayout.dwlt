@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 22053
+  controlID: 1034
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 22004
+  controlID: 986
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21995
+  controlID: 977
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -198,8 +198,8 @@ MonoBehaviour:
     y: 0
     width: 479
     height: 648.5
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -246,7 +246,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 986ffcff0471fcff6095fcff6ea3fcff6ac0fcff14cefcff52eafcff4cf6fcff52f6fcffeefbfcff7013fdff364afdffbc51fdff7c89fdff2699fdff2c99fdffe69bfdffb09dfdff50a7fdffe8a8fdff32b9fdffb617feffc817feffce17feff9a19feffd824fefffa39feffcc4dfeff1053feff2a55feff745efeffc061feffbe81feff8e1bffffa81fffff447801004878010088780100f47801004e5e0200
+      m_ExpandedIDs: def7ffff10fbffff7aad0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1128,15 +1128,15 @@ MonoBehaviour:
     y: 648.5
     width: 1547
     height: 285.5
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1184,7 +1184,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Weapons
+    - Assets/Scripts/Player
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1194,16 +1194,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts/Weapons
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\bradl\OneDrive\Documents\GitHub\gamejamproject\GameJamGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0.5}
-    m_SelectedIDs: 68050100
-    m_LastClickedID: 66920
-    m_ExpandedIDs: 000000000cf8000060090100
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 84b90000
+    m_LastClickedID: 47492
+    m_ExpandedIDs: 000000005eb800004eb90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1232,7 +1232,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000cf80000
+    m_ExpandedIDs: 000000005eb80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1258,9 +1258,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ea580000
-    m_LastClickedInstanceID: 22762
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a06700003e800000b4a2000062b00000fcd600008c5f0000ae6b00001c600000186000000c600000ec5f000068600000e85f0000fc60000002610000086100000e61000014610000265f000000000000886600000e6600009e660000fae400005ab7000078d70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1278,7 +1278,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1434,7 +1434,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 22762
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

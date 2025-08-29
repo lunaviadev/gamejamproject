@@ -10,6 +10,9 @@ public class DialogueManagerTMP : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float typingSpeed = 0.03f;
 
+
+    [SerializeField] private AudioSource typingAudioSource;
+    [SerializeField] private AudioClip typingClip;
     public static bool IsDialogueActive { get; private set; } = false;
 
     private Queue<string> sentences;
@@ -55,10 +58,23 @@ public class DialogueManagerTMP : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
+        if (typingAudioSource != null && typingClip != null)
+        {
+            typingAudioSource.clip = typingClip;
+            typingAudioSource.loop = true;
+            typingAudioSource.Play();
+        }
+
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
+        }
+
+        if (typingAudioSource != null)
+        {
+            typingAudioSource.Stop();
+            typingAudioSource.loop = false;
         }
 
         isTyping = false;
