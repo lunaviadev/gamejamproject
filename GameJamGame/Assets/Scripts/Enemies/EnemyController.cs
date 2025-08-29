@@ -10,8 +10,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float OffsetRadius = 0.5f;
 
     [Header("Flash Settings")]
-    [SerializeField] private int flashFlickers = 5;      // number of flashes
-    [SerializeField] private float flashDuration = 0.1f; // duration per flash
+    [SerializeField] private int flashFlickers = 5;
+    [SerializeField] private float flashDuration = 0.1f;
 
     private Transform player;
     private int currentHealth;
@@ -35,7 +35,6 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-
         currentHealth = enemyData.maxHealth;
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         rb = GetComponent<Rigidbody2D>();
@@ -111,11 +110,7 @@ public class EnemyController : MonoBehaviour
 
         if (Time.time >= lastShotTime + enemyData.fireRate)
         {
-            if (enemyData.bulletPattern != null)
-                enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
-            else
-                ShootAtPlayer();
-
+            ShootPatternOrFallback();
             lastShotTime = Time.time;
         }
 
@@ -128,50 +123,43 @@ public class EnemyController : MonoBehaviour
 
     private void ForceShootAndMove()
     {
-        if (enemyData.bulletPattern != null)
-            enemyData.bulletPattern.Shoot(transform, bulletPrefab, player);
-        else
-            ShootAtPlayer();
-
+        ShootPatternOrFallback();
         lastShotTime = Time.time;
         PickNewTargetPosition();
         currentState = EnemyState.Moving;
     }
 
-    private void PickNewTargetPosition()
+    private void ShootPatternOrFallback()
     {
-        int attempts = 0;
-        Vector2 potentialPosition = Vector2.zero;
-        bool validPosition = false;
-
-        while (!validPosition && attempts < 20)
+        if (enemyData.bulletPatterns != null && enemyData.bulletPatterns.Length > 0)
         {
-            Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
-            potentialPosition = (Vector2)player.position + randomOffset;
-
-            Collider2D hit = Physics2D.OverlapCircle(potentialPosition, 0.2f, enemyData.obstacleLayer);
-            if (hit == null)
-                validPosition = true;
-
-            attempts++;
+            BulletPattern pattern = enemyData.bulletPatterns[Random.Range(0, enemyData.bulletPatterns.Length)];
+            pattern.Shoot(transform, bulletPrefab, player); // Assumes pattern handles speed/damage/scale
         }
-
-        targetPosition = potentialPosition;
+        else
+        {
+            ShootAtPlayer(); // Basic fallback
+        }
     }
 
     private void ShootAtPlayer()
     {
         GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         Vector2 dir = (player.position - transform.position).normalized;
-        newBullet.GetComponent<Bullet>().Fire(dir, enemyData.bulletSpeed, "Enemy");
-        newBullet.GetComponent<Bullet>().damage = enemyData.bulletDamage;
+
+        Bullet bullet = newBullet.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.damage = enemyData.bulletDamage;
+            bullet.Fire(dir, enemyData.bulletSpeed, "Enemy");
+            newBullet.transform.localScale = Vector3.one * 3f; // Scale up fallback bullet
+        }
     }
 
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
 
-        // Start flicker flash
         if (spriteRenderer != null)
             StartCoroutine(FlashFlicker());
 
@@ -186,9 +174,9 @@ public class EnemyController : MonoBehaviour
     {
         for (int i = 0; i < flashFlickers; i++)
         {
-            spriteRenderer.color = Color.white;       // flash
+            spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashDuration);
-            spriteRenderer.color = originalColor;     // revert
+            spriteRenderer.color = originalColor;
             yield return new WaitForSeconds(flashDuration);
         }
     }
@@ -208,6 +196,20 @@ public class EnemyController : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void PickNewTargetPosition()
+    {
+        Vector2 randomOffset = Random.insideUnitCircle.normalized *
+            Random.Range(enemyData.minMoveRadius, enemyData.maxMoveRadius);
+
+        targetPosition = (Vector2)player.position + randomOffset;
+
+        // Optional: prevent invalid paths (like inside walls)
+        if (Physics2D.Raycast(player.position, randomOffset, randomOffset.magnitude, enemyData.obstacleLayer))
+        {
+            targetPosition = transform.position;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

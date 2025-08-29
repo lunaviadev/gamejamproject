@@ -8,6 +8,8 @@ public class WeaponShooter : MonoBehaviour
     [SerializeField] private GameObject[] wordPrefabs;
     [SerializeField] private float wordOffsetRadius = 0.5f;
     [SerializeField] private GameObject knifeObject;
+    [SerializeField] private Camera gameplayCamera;
+
 
     [Header("Reload Icon")]
     [SerializeField] private Transform reloadIconTransform; // assign the sprite GameObject
@@ -283,7 +285,7 @@ public class WeaponShooter : MonoBehaviour
 
         while (elapsed < beamDuration)
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPos = gameplayCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 dir = (mouseWorldPos - weaponTransform.position).normalized;
 
             GameObject newBullet = BulletPool.Instance.GetBullet();

@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float rollCooldown = 0.5f;
     public Image[] cdIcons; 
     private int cdCount = 0;
+    public int CDCount => cdCount; 
+
 
     [Header("References")]
     [SerializeField] private CameraFollow cameraFollow;

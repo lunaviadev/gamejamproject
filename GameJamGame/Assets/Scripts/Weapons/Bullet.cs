@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+
 public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -8,20 +9,35 @@ public class Bullet : MonoBehaviour
     private float spawnTime;
     public string shooterTag;
 
-    // ✅ Add this
     public bool isTeleportBullet = false;
-
     public System.Action<Vector2> OnBulletHit;
+
+    [Header("Bullet Scaling")]
+    public bool autoScale = false;           // Enable per bullet
+    public float scaleMultiplier = 1f;       // Scale to apply when enabled
+
+    private Vector3 originalScale;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        originalScale = transform.localScale;
     }
 
     private void OnEnable()
     {
         spawnTime = Time.time;
-        isTeleportBullet = false; // reset whenever reused from pool
+        isTeleportBullet = false;
+        OnBulletHit = null;
+
+        // Reset scale in case reused from pool
+        transform.localScale = originalScale;
+
+        // Apply scale if enabled
+        if (autoScale && scaleMultiplier != 1f)
+        {
+            transform.localScale = originalScale * scaleMultiplier;
+        }
     }
 
     public void Fire(Vector2 direction, float speed, string tag = "Player")
@@ -37,12 +53,6 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    
-    private void OnDisable()
-    {
-        OnBulletHit = null; // clear subscribers
-    }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -67,7 +77,6 @@ public class Bullet : MonoBehaviour
             }
         }
 
-        // ✅ Only trigger teleport if this bullet was flagged
         if (isTeleportBullet)
         {
             OnBulletHit?.Invoke(transform.position);

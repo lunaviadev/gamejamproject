@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DialogueManagerTMP : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class DialogueManagerTMP : MonoBehaviour
     [SerializeField] private AudioSource typingAudioSource;
     [SerializeField] private AudioClip typingClip;
     public static bool IsDialogueActive { get; private set; } = false;
+    public static event Action OnDialogueEnded;
+
 
     private Queue<string> sentences;
     private bool isTyping = false;
@@ -84,6 +87,7 @@ public class DialogueManagerTMP : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         IsDialogueActive = false;
+        OnDialogueEnded?.Invoke();
     }
 
     private void Update()
