@@ -90,6 +90,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            currentHealth = 4;
             LoadMainMenu();
         }
     }
@@ -110,8 +111,5 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void LoadMainMenu()
-    {
-        SceneManager.LoadScene("Main menu");
-    }
+    private void LoadMainMenu() => SceneManager.LoadScene("Main menu");
 }
