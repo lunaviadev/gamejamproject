@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 {
         "Your journey ends here...",
         "The viruses consume what remains of you.",
-        "But maybe... next time, you’ll find the code."
+        "But maybe... next time, youï¿½ll find the code."
     };
 
     private void Start()
@@ -111,5 +111,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void LoadMainMenu() => SceneManager.LoadScene("Main menu");
+    private void LoadMainMenu()
+    {
+        DialogueManagerTMP.OnDialogueEnded -= LoadMainMenu;
+        SceneManager.LoadScene("Main menu");
+    } 
 }
