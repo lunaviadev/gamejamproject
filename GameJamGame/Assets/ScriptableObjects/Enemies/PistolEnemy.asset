@@ -15,15 +15,15 @@ MonoBehaviour:
   enemyName: PistolEnemy
   maxHealth: 10
   moveSpeed: 18
-  fireRate: 5
+  fireRate: 9
   bulletSpeed: 15
   bulletDamage: 1
   detectionRange: 10
   bulletPatterns:
   - {fileID: 11400000, guid: 091244aff772dae428ad9aefc43fd292, type: 2}
   attackDuration: 2
-  minMoveRadius: 2
-  maxMoveRadius: 5
+  minMoveRadius: 1
+  maxMoveRadius: 3
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1024

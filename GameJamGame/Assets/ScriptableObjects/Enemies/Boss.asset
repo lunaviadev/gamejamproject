@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   enemyName: Boss
-  maxHealth: 80
-  moveSpeed: 2
-  fireRate: 20
+  maxHealth: 150
+  moveSpeed: 20
+  fireRate: 25
   bulletSpeed: 25
   bulletDamage: 1
-  detectionRange: 10
+  detectionRange: 20
   bulletPatterns:
   - {fileID: 11400000, guid: 95b444368aee9ef4d88c4b686466d401, type: 2}
   - {fileID: 11400000, guid: 091244aff772dae428ad9aefc43fd292, type: 2}
   - {fileID: 11400000, guid: 179d964fc1d12194587c1de1554d0c5f, type: 2}
-  attackDuration: 2
-  minMoveRadius: 2
-  maxMoveRadius: 5
+  attackDuration: 4
+  minMoveRadius: 1
+  maxMoveRadius: 2
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
-  bulletScale: 3
+    m_Bits: 1024
+  bulletScale: 4
   patternSwitchTime: 4

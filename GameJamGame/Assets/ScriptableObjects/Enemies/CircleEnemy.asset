@@ -22,8 +22,8 @@ MonoBehaviour:
   bulletPatterns:
   - {fileID: 11400000, guid: 179d964fc1d12194587c1de1554d0c5f, type: 2}
   attackDuration: 1
-  minMoveRadius: 2
-  maxMoveRadius: 5
+  minMoveRadius: 1
+  maxMoveRadius: 3
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1024

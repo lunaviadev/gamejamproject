@@ -168,6 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   shooterTag: Player
+  isTeleportBullet: 0
+  autoScale: 0
+  scaleMultiplier: 1
 --- !u!1 &8967693242689833390
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,8 +243,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.09
-  m_PointLightOuterRadius: 0.1
+  m_PointLightInnerRadius: 0.58
+  m_PointLightOuterRadius: 0.82
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
